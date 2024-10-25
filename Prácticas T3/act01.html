@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+<body>
+    <script>
+        var fechaActual = new Date();
+        var fechaFin = new Date(2024,12,31);
+        var fechaRestante = fechaFin - fechaActual;
+        var fechaResDias = Math.floor(fechaRestante / (1000 * 60 * 60 * 24));
+
+        document.write("Queda "+fechaRestante+" milisegundos para fin de año<br>");
+        document.write("Queda "+fechaResDias+" días para fin de año");
+    </script>
+</body>
+</html>

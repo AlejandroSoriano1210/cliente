@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 17</title>
+</head>
+<body>
+    <script>
+
+        var continuar = true;
+        while (continuar) {
+
+        var calculadora = prompt(`Calculadora
+                                Pulse 1 para sumar
+                                Pulse 2 para restar
+                                Pulse 3 para multiplicar
+                                Pulse 4 para dividir
+                                Pulse 5 para obtener el módulo
+                                Pulse 6 para salir`);
+
+            if (calculadora === '6') {
+                if(confirm("¿Está seguro de que quiere salir?")) {
+                    alert("Adiós");
+                    continuar = false;
+                } else {
+                    continue;
+                }
+            } else {
+               
+                var num1 = parseInt(prompt("Introduce el primer número:"));
+                var num2 = parseInt(prompt("Introduce el segundo número:"));
+                var res;
+               
+                switch (calculadora){
+                    case '1':
+                        res = num1 + num2;
+                        alert("El resultado es: "+res);
+                        break;
+                       
+                    case '2':
+                        res = num1 - num2;
+                        alert("El resultado es: "+res);
+                        break;
+                           
+                    case '3':
+                        res = num1 * num2;
+                        alert("El resultado es: "+res);
+                        break;
+                               
+                    case '4':
+                        if (num2 !== 0) {       //Comprobando si el segundo número es 0
+                            res = num1 / num2;
+                            alert("El resultado es: "+res);
+                                       
+                        } else {
+                            alert("El segundo número no puede ser un 0");
+                        }
+                        break;
+                                   
+                    case '5':
+                        res = num1 % num2;
+                        alert("El resultado es: "+res);
+                        break;
+                    
+                    default:
+                        alert("ERROR: opción no válida");
+                        break;
+                }                        
+            }  
+        }
+</script>
+</body>
+</html>

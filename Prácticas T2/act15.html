@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 15</title>
+</head>
+<body>
+    <script>
+        var frase = prompt('Escriba algo:');
+        var max = frase.length;    //Limitador del array
+
+        for (i = 0;i<max;i++) {    
+        if (isNaN(frase[i])) {     //Comprueba si es un número o no
+                document.write('<p>'+frase[i]+'</p>');
+            }
+        }
+    </script>
+</body>
+</html>

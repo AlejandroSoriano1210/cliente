@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 16</title>
+</head>
+<body>
+    <script>
+
+        //Declaramos el número, la opción de como sumarlo y el resultado de la suma
+        var num = prompt("Introduce un número:");
+        var opcion = prompt("Escoja que parte quiere sumar (escribe 'e' para parte entera o 't' para todo)");
+        var suma = 0;
+
+        if (opcion === 'e') {
+
+            var entero = parseInt(num).toString();
+   
+            for (let i = 0; i < entero.length; i++) {
+                suma += parseInt(entero[i]);
+            }
+
+        } else if (opcion === 't') {
+
+            for (let i = 0; i < num.length; i++) {
+                if (isNaN(i)) {
+                    suma += num[i];
+                } else {
+                    num[i].replace('.','');
+                }
+            }
+
+        }
+        alert('La suma de las cifras de '+num+' es : '+suma);
+
+    </script>
+</body>
+</html>

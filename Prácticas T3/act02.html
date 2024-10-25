@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+    <script>
+        var fechaActual = new Date();
+        var fechaNac1 = prompt("Escriba su fecha de nacimiento (dia-mes-año):  ")
+        var fechaNac2 = new Date(fechaNac1);
+        var edadCalc = fechaActual - fechaNac2;
+        document.write("Tengo "+edadCalc+" milisegundos");
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 11</title>
+</head>
+<body>
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+
+        var num = parseInt(prompt("Introduce el número de DNI:"));
+        var letra = prompt("Introduce la letra del DNI:");
+
+
+        function validarDNI(num, letra) {
+            
+            if (num < 0 || num > 99999999) {
+                alert("El número proporcionado no es válido.");
+            }
+
+
+            var resto = num % 23;
+            var letraRes = letras[resto];
+
+
+            if (letra.toUpperCase() !== letraRes) {
+                alert("La letra que introduciste no se corresponde con el DNI.");
+            } else {
+                alert("El DNI es correcto.");
+            }
+        }
+
+
+        validarDNI(num, letra);
+
+
+    </script>
+</body>
+</html>

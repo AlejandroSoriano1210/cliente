@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+</head>
+<body>
+    <div id="res"></div>
+
+    <button onclick="mostrarMultiplos()">Calcular múltiplos de 8</button>
+    <script>
+        function mostrarMultiplos() {
+            var num1 = parseInt(prompt("Introduce el primer número:"));
+            var num2 = parseInt(prompt("Introduce el segundo número:"));
+
+
+            if (num1>num2) {
+                var mayor=num1;
+                var menor=num2;
+            } else {
+                var mayor=num2;
+                var menor=num1;
+            }
+
+            var multiplosDe8 = [];
+            for (i = menor; i <= mayor; i++) {
+                if (i % 8 === 0) {
+                    multiplosDe8.push(i);
+                }
+            }
+
+            var resultado = document.getElementById("res");
+
+            if (multiplosDe8.length > 8) {
+                resultado.innerHTML = "Los multiplos de 8 entre "+menor+" y "+mayor+" son :" +multiplosDe8.join(", ");
+            } else {
+                resultado.innerHTML = "No existen multiplos de 8 entre "+menor+" y "+mayor+" .";
+            }
+        }
+    </script>
+</body>
+</html>

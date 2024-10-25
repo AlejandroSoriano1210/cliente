@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+</head>
+<body>
+    <script>
+        var num = prompt("Introduzca un número menor de 1000:");
+
+        if (num > 1000) {
+            alert("Número no válido, pruebe otro");
+        } else {
+            var digit = [];
+            num = num.toString();
+
+            for (let i = 0; i <= 3; i++) {
+                digit.push(num[i]);
+            }
+            alert("Los dígitos de su número son "+digit.join(", "));
+        }
+            
+    </script>
+</body>
+</html>

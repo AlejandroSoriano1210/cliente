@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Navegador</title>
+</head>
+<body>
+    <button onclick="history.back();">Atrás</button>        <!--Volver a página anterior-->
+    <button onclick="history.forward();">Delante</button>   <!--Siguiente página-->
+    <button onclick="alert(location.href)">URL</button>     <!--Saca URL por botón-->
+
+    <script>
+        document.write("<br>"+window.innerWidth+"px de ancho, y  "+window.innerHeight+"px de alto.");   //Propiedades de la ventana
+        document.write("<br>La página esta en "+navigator.language+" .");                               //Idioma de la página
+        document.write("<br> Estado de conexión del navegador: "+navigator.onLine);                     //Conexión de la página
+    </script>
+</body>
+</html>

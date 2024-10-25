@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8</title>
+</head>
+<body>
+    <script>
+        var facto = parseInt(prompt("Introduzca un número entero"));
+        var res = 1;
+
+        if (facto < 0) {
+            document.write("Lo siento, solo se permiten enteros")
+        }    
+        
+        while (facto >= 1) {
+            res *= facto;
+            --facto;
+        }
+       
+        document.write("El factorial de su número: "+res);
+    </script>
+</body>
+</html>

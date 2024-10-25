@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+    <script>
+        var nota = prompt("¿Cuánto has sacado en el examen? ")
+        if (nota < 5) {
+            document.write("Estas suspenso con un "+nota);
+        } else if (nota >= 5 && nota <= 7) {
+            document.write("<h3>Estas aprobado con un "+nota+"</h3>");
+        } else if (nota >= 8 && nota < 9) {
+            document.write("<h2>Estas aprobado con notable con un "+nota+"</h2>");
+        } else if (nota >=9) {
+            document.write("<h1>Tienes un sobresaliente con un "+nota+"!</h1>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+</head>
+<body>
+    <p id="edad"></p>
+
+    <script>
+        const fechaNacimiento = new Date('1990-01-15');
+        const fechaActual = new Date();
+
+        let edadAnios = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        let edadMeses = fechaActual.getMonth() - fechaNacimiento.getMonth();
+        let edadDias = fechaActual.getDate() - fechaNacimiento.getDate();
+
+        if (edadDias < 0) {
+            edadMeses--;
+            const ultimoMes = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0);
+            edadDias += ultimoMes.getDate();
+        }
+
+        if (edadMeses < 0) {
+            edadAnios--;
+            edadMeses += 12;
+        }
+
+        const edadTexto = `Tienes ${edadAnios} años, ${edadMeses} meses y ${edadDias} días.`;
+        document.getElementById('edad').textContent = edadTexto;
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+</head>
+<body>
+    <a href="informacion.html"><button>Información</button></a>     <!--Navegar a otra página por botón-->
+    <button onclick="history.back();">Atrás</button>                <!--Volver a página anterior-->
+    <button onclick="history.forward();">Delante</button>           <!--Siguiente página-->
+
+    <script>
+        var fecha = new Date();
+        var semana = fecha.getDay();   //Día de la semana como número
+        var diaSemana = '';
+        var diaMes = fecha.getDate();
+        var mes = 1+fecha.getMonth();
+        var ano = fecha.getFullYear();
+        var nombre = prompt("Introduzca su nombre: ");
+
+        if (nombre == ""){          //Asegurarse que el nombre no esta vacío
+
+            alert("¡¡¡¡¡INTRODUZCA UN NOMBRE!!!!!!")
+            document.write("<h1>Recargue para introducir su nombre</h1>");
+
+        } else {                    //Averiguar el nombre del día de la semana
+            switch (semana) {
+                case 1: {
+                    diaSemana = "Lunes";
+                } break;
+                case 2: {
+                    diaSemana = "Martes";
+                } break;
+                case 3: {
+                    diaSemana = "Miércoles";
+                } break;
+                case 4: {
+                    diaSemana = "Jueves";
+                } break;
+                case 5: {
+                    diaSemana = "Viernes";
+                } break;
+                case 6: {
+                    diaSemana = "Sábado";
+                } break;
+                case 7: {
+                    diaSemana = "Domingo";
+                } break;
+            }
+            
+            document.write("<br>Hoy es "+diaSemana+" , "+diaMes+" de "+mes+" de "+ano+" .<br>");
+            document.write("Bienvenido/a, "+nombre+" en la web.");
+        }
+    </script>
+</body>
+</html>

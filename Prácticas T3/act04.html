@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <script>
+        var fecha = new Date();
+        var hora = fecha.getHours();
+
+        document.write(fecha.getHours());
+
+        if (6 < hora <= 12) {
+            document.write("Buenos Días!");
+
+        } else if (12 < hora <= 18) {
+            document.write("Buenas Tardes!");
+
+        } else if (18 < hora <= 6) {
+            document.write("Buenas Noches!");
+
+        }
+    </script>
+</body>
+</html>
