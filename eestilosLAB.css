@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    gap: 25px 54px;
+    flex-wrap: nowrap;
+    background: steelblue;
+    width: 200px;
+  }
+  
+  .item {
+    background: grey;
+    width: 50%;
+  }
+  
