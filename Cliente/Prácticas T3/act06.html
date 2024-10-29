@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+<body>
+    <script>
+        var utc = `Escriba que zona horaria desea conocer la hora:
+        UTC -12 : Línea internacional de fecha del oeste
+        UTC -11 : Isla Midway, Samoa
+        UTC -10 : Hawai
+        UTC -9 : Alaska
+        UTC -8 : Hora del pacífico (USA y Canadá)
+        UTC -7 : Hora de las montañas rocosas (USA y Canadá)
+        UTC -6 : América central
+        UTC -5 : Hora central (USA y Canadá)
+        UTC -4 : Hora del Atlántico (Canadá)
+        UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo
+        UTC -2 : Atlántico central
+        UTC -1 : Azores
+        UTC 0 : Hora del meridiano (Greenwich, Londres, Dublín)
+        UTC +1 : París, Madrid, Barcelona, Roma
+        UTC +2 : El Cairo
+        UTC +3 : Nairobi
+        UTC +4 : Bakú
+        UTC +5 : Ekaterimburgo
+        UTC +6 : Astana
+        UTC +7 : Bangkok
+        UTC +8 : Ulán Bator
+        UTC +9 : Tokio
+        UTC +10 : Sidney
+        UTC +11 : Islas Salomón
+        UTC +12 : Wellington`;
+
+        var zonaHoraria = parseInt(prompt(utc,"-12, -11, -10, -9..."));
+        var fechaUTC = new Date();
+        var fechaLocal = new Date(fechaUTC.getTime() + (zonaHoraria * 60 * 60 * 1000));
+        var fechaHora = fechaLocal.getUTCHours();
+        var fechaMinutos = fechaLocal.getUTCMinutes();
+        
+        if (fechaHora < 10) {fechaHora = "0" + fechaHora};
+        if (fechaMinutos < 10) {fechaMinutos = "0" + fechaMinutos};
+        
+        alert("Son las "+fechaHora+":"+fechaMinutos);
+    </script>
+</body>
+</html>
