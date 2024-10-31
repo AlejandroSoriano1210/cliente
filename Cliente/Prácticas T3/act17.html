@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 17</title>
+</head>
+<body>
+    <textarea id="texto" style="width:  200px; height: 200px;"></textarea>
+    <button onclick="sacarPalabras()">Enviar</button>
+    <script>
+        function sacarPalabras() {
+
+            var textoJS = document.getElementById("texto").value;
+            var regEx = /(^|\.\¡\¿\?\!\s*)(\w+)/g;
+            var palabras = textoJS.match(regEx);
+
+            alert(palabras);
+        }
+    </script>
+</body>
+</html>

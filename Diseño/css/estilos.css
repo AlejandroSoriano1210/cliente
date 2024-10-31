@@ -1,15 +1,4 @@
-.navegacion {
-    background: white;
-    display: flex;
-    width: 100px;
-    height: 100px;
-  
-    flex-wrap: wrap;
-    align-content: end;
-  }
-  
-  .item {
-    width: 50%;
-    height: 50px;
-  }
-  
+a {
+  color: red;
+  text-decoration: none;
+}

@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio</title>
-    <link rel="stylesheet" href="eestilosLAB.css">
 </head>
 <body>
-    <div class="container"> <!-- Flex container -->
-        <div class="item item-1">1</div> <!-- Flex items -->
-        <div class="item item-2">2</div>
-        <div class="item item-3">3</div>
-    </div>      
+    <script type="text/javascript">
+        document.write("<form name=\"cambiacolor\">");
+        document.write("<b>Selecciona un color para el fondo de página:</b><br>");
+        document.write("<select name=\"color\">");
+        document.write("<option value=\"red\">Rojo</option>");
+        document.write("<option value=\"blue\">Azul</option>");
+        document.write("<option value=\"yellow\">Amarillo</option>");
+        document.write("<option value=\"green\">Verde</option>");
+        document.write("</select>");
+        document.write("<input type=\"button\” value=\"Modifica el color\"onclick=\"document.bgColor=document.cambiacolor.color.value\">");
+        document.write("</form>");
+    </script>
 </body>
 </html>
