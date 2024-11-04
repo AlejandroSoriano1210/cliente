@@ -2,3 +2,38 @@ a {
   color: red;
   text-decoration: none;
 }
+
+.nombre_autor {
+  color: red;
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  padding-left: 100px;
+  padding-bottom: 15px;
+}
+
+header>h1{
+  font-family: sans-serif;
+  color: white;
+  margin-top: 0em;
+  padding-bottom: 15px;
+}
+
+nav {
+  text-align: center;
+}
+
+.item {
+  display: inline;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: smaller;
+  margin: 10px;
+  padding-bottom: 2px;
+}
+
+.item:hover {
+  border-bottom: solid red;
+}
