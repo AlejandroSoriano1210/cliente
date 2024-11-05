@@ -7,9 +7,11 @@
 </head>
 <body>
     <script>
-        var resultado;
+        var variables = window.location.search;
+        var variables = new URLSearchParams(variables);
+        var resultado = parseInt(variables.get("operacion"));
 
-        document.write(resultado);
+        document.write("La operación da como resultado: "+resultado);
     </script>
 </body>
 </html>

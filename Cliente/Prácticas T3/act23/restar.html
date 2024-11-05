@@ -6,12 +6,21 @@
     <title>Restar</title>
 </head>
 <body>
-    <button onclick="calcular()">Calcular</button>
+    <form action="">
+        <label for="">Restar
+            <input type="number" id="x">
+            -
+            <input type="number" id="y">
+        </label>
+        <button onclick="calcular()">Calcular</button>
+    </form>
     <script>
-
         function calcular() {
-            window.open("resultado.html?operacion=${x-y}")
+            var x = parseInt(document.getElementById('x'));
+            var y = parseInt(document.getElementById('y'));
+            window.open(`resultado.html?operacion=${x-y}`,"resultado","height=100","width=100");
         }
+
     </script> 
 </body>
 </html>
