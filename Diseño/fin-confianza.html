@@ -9,12 +9,11 @@
 <body>
 
     <header>
-        <figure>
+        <figure class="logo">
             <img src="img/logo-website.jpg" alt="">
         </figure>
 
         <h1>#1 La credibilidad de los medios</h1>
-
     </header>
 
     <nav>
@@ -25,14 +24,16 @@
         </ul>
     </nav>
 
+    <hr>
+    
     <section>
         <h2>¿El fin de la confianza?</h2>
 
-        <p class="autor">Por <span class="nombre_autor">Ferran Esteve</span>, 13 de septiembre de 2018</p>
+        <p class="autor_fin">Por <a class="nombre_autor">Ferran Esteve</a>, 13 de septiembre de 2018</p>
 
         <hr>
 
-        <p class="texto">
+        <p class="comienzo">
             Malas políticas laborales, evasión de impuestos, impacto sobre el transporte y la vivienda, uso indebido de
             datos personales… Actuaciones como las del caso Facebook y Cambridge Analytica les están minando la
             credibilidad, cosa que, por el momento, no se ha traducido en pérdidas irreparables. Una mayor
@@ -42,7 +43,7 @@
 
         <hr>
 
-        <figure>
+        <figure class="figuras">
             <img src="img/Fi_confi_lab.jpg" alt="">
             <figcaption class="imagenes">Lie to Me | <a href="https://www.flickr.com/photos/zygia/5714137850">Rosy</a> |
                 CC BY-ND 2.0 </figcaption>
@@ -90,8 +91,8 @@
             falsas, manipulación de procesos electorales y, claro está, pérdida de privacidad. Vayamos por partes.
         </p>
 
-        <figure>
-            <video src="https://www.youtube.com/watch?v=FXdYSQ6nu-M"></video>
+        <figure class="figuras">
+            <iframe width="897" height="505" src="https://www.youtube.com/embed/FXdYSQ6nu-M" title="Cambridge Analytica whistleblower: &#39;We spent $1m harvesting millions of Facebook profiles&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <figcaption class="imagenes">
                 Cambridge Analytica whistleblower: "We spent $1m harvesting millions of Facebook profiles" | The
                 Guardian
@@ -202,23 +203,25 @@
             impacto social.
         </p>
 
-        <figure>
-            <img src="img/ferran-esteve.jpg" alt="">
-            <figcaption class="ferranEsteve">
-                Ferran Esteve es periodista, investigador e ilustrador. Su proyecto más reciente es Proun, un fanzine de
-                investigación y creación que explora las intersecciones del arte, la tecnología y el cambio social.
-            </figcaption>
-        </figure>
-
+        <div>    
+            <figure>
+                <img src="img/ferran-esteve.jpg" alt="" class="foto_autor">
+                <figcaption class="ferranEsteve">
+                    Ferran Esteve es periodista, investigador e ilustrador. Su proyecto más reciente es Proun, un fanzine de
+                    investigación y creación que explora las intersecciones del arte, la tecnología y el cambio social.
+                </figcaption>
+            </figure> 
+        </div>
+        
         <p class="imagenes">
-            Esteve, Ferran (13 de septiembre de 2018). ¿El fin de la confianza?. Consultado desde <span class="enlace">http://lab.cccb.org/es/el-fin-de-la-confianza</span>
+            Esteve, Ferran (13 de septiembre de 2018). ¿El fin de la confianza?. Consultado desde <a class="enlace" href="http://lab.cccb.org/es/el-fin-de-la-confianza">http://lab.cccb.org/es/el-fin-de-la-confianza</a>
         </p>
 
     </section>
 
     <footer>
-        <figure>
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es"><img src="img/creative-commons.png" alt=""></a>
+        <figure class="piePagina">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es"><img src="img/creative-commons.png" alt="" class="iconos"></a>
             <figcaption class="piePagina">Trabajo realizado por Alejandro Soriano Aragón. Asignatura: HTML y CSS
             </figcaption>
         </figure>
