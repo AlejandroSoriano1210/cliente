@@ -1,41 +1,63 @@
-.nombre_autor {
-  color: red;
-  text-decoration: none;
-}
-
 header {
+  margin: 0;
   background-color: #000000;
   padding-left: 100px;
-  padding-bottom: 15px;
 }
 
-header>h1{
+.titulo {
+  font-size: 50px;
   font-family: sans-serif;
   color: #FFFFFF;
   margin-top: 0em;
   padding-bottom: 15px;
 }
 
-nav {
+.menu {
   text-align: center;
+  margin-top: 20px;
 }
 
-.item {
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.menu li {
   display: inline;
   text-align: center;
   font-family: sans-serif;
   font-size: smaller;
-  margin: 10px;
+  margin: 0 15px;
   padding-bottom: 2px;
-  color: #2222;
 }
 
-.item:hover {
-  border-bottom: solid #c00;
+.menu a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 
-body {
-  margin: 0;
+.menu a:hover {
+  color: #CC0000;
+}
+
+.menu a.active {
+  border-bottom: 2px solid #CC0000;
+}
+
+hr {
+  color: #DDDDDD;
+}
+
+.nombre_autor {
+  color: red;
+  text-decoration: none;
+}
+
+section {
+  margin: 0px;
   padding: 0;
   font-family: sans-serif;
   font-size: large;
