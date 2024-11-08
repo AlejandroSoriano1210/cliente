@@ -1,25 +1,39 @@
-header {
+body {
   margin: 0;
+  padding-top: 0;
+}
+
+header {
   background-color: #000000;
   padding-left: 100px;
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+.logo {
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .titulo {
-  font-size: 50px;
+  font-size: 60px;
   font-family: sans-serif;
   color: #FFFFFF;
   margin-top: 0em;
   padding-bottom: 15px;
+  margin-bottom: 0;
+  margin-left: 3%;
 }
 
 .menu {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .menu ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   display: inline-block;
 }
 
@@ -29,7 +43,6 @@ header {
   font-family: sans-serif;
   font-size: smaller;
   margin: 0 15px;
-  padding-bottom: 2px;
 }
 
 .menu a {
@@ -47,35 +60,40 @@ header {
   border-bottom: 2px solid #CC0000;
 }
 
-hr {
+section > hr {
   color: #DDDDDD;
+  width: 63%;
 }
 
 .nombre_autor {
   color: red;
   text-decoration: none;
+  margin-left: 25%;
 }
 
-section {
-  margin: 0px;
+.texto {
   padding: 0;
   font-family: sans-serif;
-  font-size: large;
+  font-size: 20px;
   color: #222222;
+  margin-left: 15%;
+  max-width: 70%;
+  text-align: justify;
 }
 
 .comienzo {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-section {
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 20%;
+  max-width: 60%;
+  font-size: 25px;
 }
 
 .figuras {
   text-align: center;
+}
+
+.imagen {
+  max-width: 40%;
+  width: 50vw;
 }
 
 div {
@@ -85,14 +103,25 @@ div {
 .foto_autor {
   float: left;
   border-radius: 100%;
-  width: 150px;
-  height: 150px;
-  margin-right: 15px;
+  max-width: 35%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.descripcionEsteve {
+  margin-left: 25%;
+  max-width: 59%;
 }
 
 .ferranEsteve {
   padding: 50px;
   margin: 30px;
+}
+
+.webgrafia {
+  font-style: italic;
+  padding-bottom: 55px;
+  margin-left: 25%;
 }
 
 footer {
@@ -103,7 +132,6 @@ footer {
 }
 
 .iconos {
-  margin-left: 35px;
   margin-bottom: 5px;
 }
 
@@ -116,18 +144,18 @@ a:hover {
   color: #2222;
 }
 
-.webgrafia {
-  font-style: italic;
-  padding-bottom: 55px;
-  padding-left: 150px;
-}
 
 .piePagina {
-  margin-left: 35px;
+  margin-left: 15%;
 }
 
 .cursiva {
   font-style: italic;
+}
+
+.noticias {
+  margin-left: 15%;
+  margin-bottom: 3%;
 }
 
 ul li {
@@ -137,19 +165,22 @@ ul li {
 
 .h1 {
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bolder;
+  margin-left: 15%;
 }
 
 .h2 {
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
+  margin-left: 15%;
 }
 
 .terminos {
   font-family: sans-serif;
   font-size: 30px;
+  margin-left: 15%;
 }
 
 .periodico {
@@ -159,3 +190,21 @@ ul li {
 .red {
   list-style-image: url(/Diseño/img/internet-icon.png);
 }
+
+.li_falso {
+  list-style-type: none;
+}
+
+.recursos {
+  font-family: sans-serif;
+}
+
+.tituloRecursos {
+  font-size: 20px;
+}
+
+.organizaciones {
+  font-weight: 500;
+}
+
+.definiccion
