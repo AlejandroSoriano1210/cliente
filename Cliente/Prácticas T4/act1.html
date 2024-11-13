@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+<body>
+    <script>
+        function ordenar(arr) {
+
+            let x = arr.length;
+            
+            for (let i = 0; i <  x - 1; i++) {
+                for (let j = 0; j < x - 1 - i; j++){
+                    if (arr[j] > arr[j + 1]) {
+
+                        let y = arr[j];
+
+                        arr[j] = arr[j + 1];
+
+                        arr[j + 1] = y;
+                    }
+                }
+            }
+            return arr;
+        }
+        var array = [3, 7, 1, 9, 23, 2];
+        console.log("Array: "+array);
+        var arrayOrdenado = ordenar(array);
+        console.log("Array ordenado: "+arrayOrdenado);
+
+    </script>
+</body>
+</html>
