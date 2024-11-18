@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicar</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
@@ -18,6 +19,140 @@
             </ul>
         </nav>
     </header>
+    <section>
+        <p class="h1">O2: depositar un documento</p>
 
+        <form class="formulario">
+            <fieldset>
+                <legend>Datos de la publicación</legend>
+                <label for="comunidad">Comunidad donde debe publicarse :</label>
+                <select id="comunidad" name="comunidad" required>
+                    <option value="docencia">Docencia</option>
+                    <option value="institucional">Institucional</option>
+                    <option value="investigacion">Investigación</option>
+                    <option value="datos">Datos</option>
+                </select>
+    
+                <label for="nombre">Nombre del autor :</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="apellido1">Primer apellido del autor :</label>
+                <input type="text" id="apellido1" name="apellido1" required>
+    
+                <label for="apellido2">Segundo apellido del autor :</label>
+                <input type="text" id="apellido2" name="apellido2" required>
+    
+                <label for="titulo">Título del documento :</label>
+                <input type="text" id="titulo" name="titulo" required>
+    
+                <label for="fecha">Fecha de creación del documento :</label>
+                <input type="date" id="fecha" name="fecha" required>
+    
+                <label for="editorial">Editorial:</label>
+                <select id="editorial" name="editorial">
+                    <option value="uoc">Universitat Oberta de Catalunya</option>
+                </select>
+    
+                <label for="tipoDocumento">Tipo de documento :</label>
+                <select id="tipoDocumento" name="tipoDocumento" required>
+                    <option value="articulo">Artículo</option>
+                    <option value="tfc">Trabajo fin de carrera</option>
+                    <option value="tfm">Trabajo fin de máster</option>
+                    <option value="tesis">Tesis doctoral</option>
+                    <option value="libro">Libro</option>
+                    <option value="capitulo">Capítulo o parte de libro</option>
+                    <option value="revision">Revisión</option>
+                    <option value="conferencia">Conferencia</option>
+                    <option value="clase">Clase</option>
+                    <option value="informe">Informe de investigación</option>
+                    <option value="interno">Informe interno</option>
+                    <option value="hoja">Hoja informativa</option>
+                    <option value="documental">Documental</option>
+                </select>
+    
+                <label for="idioma">Idioma del documento :</label>
+                <select id="idioma" name="idioma" required>
+                    <option value="es">Castellano</option>
+                    <option value="ca">Catalán</option>
+                    <option value="in">Inglés</option>
+                    <option value="al">Alemán</option>
+                    <option value="fr">Francés</option>
+                    <option value="it">Italiano</option>
+                    <option value="jp">Japonés</option>
+                    <option value="ch">Chino</option>
+                    <option value="otro">Otro</option>
+                </select>
+    
+                <label for="resumen">Breve resumen del documento :</label>
+                <textarea id="resumen" name="resumen" required></textarea>
+    
+                <label for="licencia">Acepta la licencia de publicación del documento :</label>
+                <select id="licencia" name="licencia" required>
+                    <option value="rec-nc-sod">Reconocimiento-NoComercial-SinObraDerivada 3.0</option>
+                    <option value="rec-nc-ci">Reconocimiento-NoComercial-CompartirIgual 3.0</option>
+                    <option value="rec-sod">Reconocimiento-SinObraDerivada 3.0</option>
+                    <option value="rec-ci">Reconocimiento-CompartirIgual 3.0</option>
+                    <option value="rec">Reconocimiento 3.0</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <label for="nombreCompleto">Nombre y apellidos :</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+    
+                <div class="opciones-genero">
+                    <label>
+                        <input type="radio" id="hombre" name="genero" value="hombre" required>
+                        Hombre
+                    </label>
+                    <label>
+                        <input type="radio" id="mujer" name="genero" value="mujer" required>
+                        Mujer
+                    </label>
+                </div>
+    
+                <label for="tipoId">Tipo de documento de identidad :</label>
+                <select id="tipoId" name="tipoId" required>
+                    <option value="nif">NIF</option>
+                    <option value="nie">NIE</option>
+                    <option value="pass">PASS</option>
+                </select>
+    
+                <label for="documento">Número de documento :</label>
+                <input type="number" id="documento" name="documento" required>
+    
+                <label for="email">Correo electrónico :</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="telefono">Teléfono (opcional):</label>
+                <input type="tel" id="telefono" name="telefono">
+    
+                <label for="idiomaRespuesta">Idioma para la respuesta :</label>
+                <select id="idiomaRespuesta" name="idiomaRespuesta" required>
+                    <option value="es">Castellano</option>
+                    <option value="ca">Catalán</option>
+                </select>
+    
+                <label>
+                    <input type="checkbox" id="politica" name="politica" required>
+                    He leído y acepto la política de privacidad y el aviso legal 
+                </label>
+    
+                <label>
+                    <input type="checkbox" id="informado" name="informado">
+                    Deseo ser informado sobre las nuevas incorporaciones al repositorio
+                </label>
+            </fieldset>
+    
+            <button type="submit">Enviar</button>
+            
+        </form>
+    </section>
+    <footer>
+        <p>Actividad realizada por Alejandro Soriano Aragón, para la asignatura HTML y CSS</p>
+        <br>
+        <p>Primer semestre del curso 2018-2019</p>
+    </footer>
 </body>
 </html>
