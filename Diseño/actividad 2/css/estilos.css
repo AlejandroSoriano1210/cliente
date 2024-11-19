@@ -62,12 +62,14 @@ nav ul.navegacion li a.active{
 }
 
 .section-1 h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 300%;
+    margin-bottom: 5%;
 }
 
-.section-1 p {
+.text-section-1 p {
     margin-bottom: 20px;
+    font-size: 130%;
+    margin-right: 10%;
 }
 
 .ultimos_envios {
@@ -95,36 +97,38 @@ nav ul.navegacion li a.active{
 .section-2 {
     text-align: center;
     background-color: #f3f4f6;
-    padding: 40px 20px;
+    padding-bottom: 2%;
+    padding-left: 17%;
+    padding-right: 20%;
     margin: 0;
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%;
     box-sizing: border-box;
 }
 
 .section-2-container {
     display: flex;
     justify-content: center;
-    gap: 6%;
+    gap: 7%;
     flex-wrap: wrap;
 }
 
 .section-2 h2 {
     font-size: 200%;
     margin-bottom: 6%;
+    padding-left: 7%;
 }
 
 .stats {
     text-align: center;
-    max-width: 150px;
 }
 
 .stats i {
-    size: 50%;
+    font-size: 500%;
     margin-bottom: 10px;
 }
 
 .stats p {
-    margin: 5px 0;
+    margin: 0;
     font-weight: bold;
 }
 
@@ -158,7 +162,7 @@ nav ul.navegacion li a.active{
 
 .publicar {
     flex: 1;
-    padding: 0 20%;
+    padding: 3% 20%;
 }
 
 .publicar h1 {
@@ -170,7 +174,7 @@ nav ul.navegacion li a.active{
     padding-bottom: 5%;
 }
 
-.tabla-envios {
+.tabla {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
@@ -178,6 +182,7 @@ nav ul.navegacion li a.active{
 
 .tabla-envios th, .tabla-envios td {
     border-top: 2px solid #000078;
+    border-bottom: 2px solid #000078;
     padding: 10px;
     text-align: center;
 }
