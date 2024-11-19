@@ -170,45 +170,44 @@ nav ul.navegacion li a.active{
 }
 
 .envios {
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
     flex: 1;
     padding-bottom: 5%;
 }
 
-.tabla {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+.envios h1 {
+    font-size: 300%;
+    margin-bottom: 3%;
 }
 
-.tabla-envios th, .tabla-envios td {
-    border-top: 2px solid #000078;
-    border-bottom: 2px solid #000078;
-    padding: 10px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 2fr 1fr 0.5fr;
+    gap: 0;
+    padding: 0;
     text-align: center;
 }
-
-.tabla-envios th {
+  
+.header {
+    font-weight: bold;
     background-color: white;
 }
 
-.tabla-envios tr:nth-child(odd) {
+.grid-container > div {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #000078;
+}
+
+.grid-container > div:nth-child(-n+6) {
+    border-top: 2px solid #000078;
+}
+
+.gris {
     background-color: #D0D0D0;
 }
-
-.tabla-envios tr.info {
-    background-color: white;
-    
-}
-
-
-
-
-
-
-
-
-
-
 
 .pie-de-pagina {
     background-color: #D0D0D0;
