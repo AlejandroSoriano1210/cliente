@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla con HTML y CSS</title>
+    <title>Página de Inicio</title>
     <link rel="stylesheet" href="eestilosLAB.css">
 </head>
 <body>
-    <h1>Ejemplo de Tabla</h1>
-    <table class="mi-tabla">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-                <th>Ciudad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Juan</td>
-                <td>25</td>
-                <td>Madrid</td>
-            </tr>
-            <tr>
-                <td>Ana</td>
-                <td>30</td>
-                <td>Barcelona</td>
-            </tr>
-            <tr>
-                <td>Pedro</td>
-                <td>35</td>
-                <td>Valencia</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="img/Logo_blau_uoc.png" alt="Logo UOC" class="logo">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Buscar</a></li>
+                    <li><a href="#">Publicar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>O2, l'oberta en obert</h1>
+            <p>Repositorio de publicaciones digitales de acceso abierto de la comunidad UOC</p>
+            <button class="btn">Últimos envíos</button>
+        </div>
+        <div class="hero-video">
+            <iframe src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Sección de cifras -->
+    <section class="stats">
+        <div class="stat">
+            <img src="img/publicaciones.png" alt="Icono publicaciones">
+            <p><strong>10.000</strong></p>
+            <p>publicaciones en abierto</p>
+        </div>
+        <div class="stat">
+            <img src="img/descargas.png" alt="Icono descargas">
+            <p><strong>100.000</strong></p>
+            <p>descargas anuales</p>
+        </div>
+        <div class="stat">
+            <img src="img/visitas.png" alt="Icono visitas">
+            <p><strong>15.000</strong></p>
+            <p>visitas anuales</p>
+        </div>
+    </section>
+
+    <!-- Sección de objetivos -->
+    <section class="objectives">
+        <h2>Objetivos</h2>
+        <ul>
+            <li><strong>Difundir</strong> los documentos digitales producidos por miembros de la UOC.</li>
+            <li><strong>Preservar</strong> la documentación digital generada por la universidad.</li>
+            <li><strong>Potenciar</strong> el acceso abierto a la información científica.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Actividad realizada por Nombre y apellidos del alumno, para la asignatura HTML y CSS<br>
+        Primer semestre del curso 2018-2019</p>
+    </footer>
 </body>
 </html>
