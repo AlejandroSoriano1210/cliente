@@ -6,11 +6,18 @@
     <title>Actividad 12</title>
 </head>
 <body>
-    <textarea name="anadir-articulo" id="anadir"></textarea>
-    <button type="submit"></button>
-    <button type="delete-1"></button>
-    <button type="delete-ultimo"></button>
-    <button type="mostrar-3"></button>
+    <h1>Lista de la compra</h1>
+    <label for="lista-compra">Comprar:
+        <input type="text" id="lista-compra">
+    </label>
+    <br>
+    <button onclick="anadir">Añadir</button>
+    <br>
+    <button onclick="delete1">Eliminar el primer artículo</button>
+    <br>
+    <button onclick="deleteUltimo">Eliminar el último</button>
+    <br>
+    <button onclick="mostrar">Mostrar los 3 primeros</button>
     <script src="app.js"></script>
 </body>
 </html>
