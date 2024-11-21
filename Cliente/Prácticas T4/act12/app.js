@@ -12,9 +12,13 @@ function mostrar() {
 }
 
 function deleteUltimo() {
-    var lista3ultimo = listaCompra.splice(listaCompra.length - 3, 3);
+    var lista3Ultimo = listaCompra.splice(listaCompra.length - 3, 3);
+    document.write(lista3Ultimo.toLocaleString);
+    return deleteUltimo;
 }
 
 function delete1() {
-
+    var listaUltimo = listaCompra.pop;
+    document.write(listaUltimo.toLocaleString);
+    return delete1;
 }
