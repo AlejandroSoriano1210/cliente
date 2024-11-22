@@ -4,40 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="eestilosLAB.css">
 </head>
 <body>
-    <div class="tabla">
-        <!-- Encabezados -->
-        <div class="fila1">
-            <div class="thead"><i class="fas fa-book-reader"></i> Título</div>
-            <div class="thead"><i class="fas fa-user-edit"></i> Autor</div>
-            <div class="thead"><i class="fas fa-calendar-alt"></i> Publicación</div>
-            <div class="thead"><i class="fas fa-briefcase"></i> Editorial</div>
-            <div class="thead"><i class="fas fa-language"></i> Idioma</div>
-            <div class="thead"><i class="fas fa-globe"></i> URI</div>
-        </div>
-        
-        <!-- Fila 1 (oscura) -->
-        <div class="fila-oscura">
-            <p>Título 1</p>
-            <p>Autor 1</p>
-            <p>Fecha</p>
-            <p>Editorial</p>
-            <p>Idioma</p>
-            <p><a href="#">Enlace</a></p>
-        </div>
-        
-        <!-- Fila 2 (normal) -->
-        <div class="fila-normal">
-            <p>Título 2</p>
-            <p>Autor 2</p>
-            <p>Fecha</p>
-            <p>Editorial</p>
-            <p>Idioma</p>
-            <p><a href="#">Enlace</a></p>
-        </div>
-    </div>
-    
+    <script>
+        document.write("parse " + Date.parse("April 20,2012") + "<br>") 
+        var later = new Date("August 13,2012");
+        document.write("to-DateString " + later.toDateString() + "<br>")
+        document.write("to-localDateString " + later.toLocaleDateString() +
+        "<br>")
+        document.write("toTimeString " + later.toTimeString() + "<br>")
+        document.write("toLocaleTimeString " + later.toLocaleTimeString() +
+        "<br>")
+        document.write("toGMTString " + later.toGMTString() + "<br>")
+        document.write("toUTCString " + later.toUTCString() + "<br>")
+        document.write("toString " + later.toString() + "<br>")
+        document.write("toLocaleString " + later.toLocaleString() + "<br>")
+        document.write("toISOString " + later.toISOString() + "<br>") 
+    </script>    
 </body>
 </html>
