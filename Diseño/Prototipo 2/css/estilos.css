@@ -1,95 +1,66 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100%;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, rgba(250, 250, 250, 1) 0%, rgba(152, 193, 255, 1) 50%, rgba(102, 208, 52, 1) 100%);
-    background-size: 400% 400%;
-    animation: gradienteFondo 30s ease infinite; /* Gradiente animado, pero suave */
+    background: linear-gradient( #FAFAFA 6%, #98C1FF 14%, #98C1FF 86%, #66D034 89%);
+
 }
 
-@keyframes gradienteFondo {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: fit-content;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(250, 250, 250, 0.8); 
 }
 
-.header .logo img, .header .nombre img {
-    height: 80px;
-}
-
-.inicio {
-    padding: 60px 20px;
+.portada {
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
-}
-
-.inicio figure {
-    margin: 20px 0;
-}
-
-.inicio .portada {
     position: relative;
 }
 
-.inicio .portada img {
-    width: 100%;
-    height: auto;
-}
-
-.inicio .texto-portada {
+.img-portada .texto-portada {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.aves, .mamiferos {
-    display: inline-block;
-    width: 45%;
-    margin: 10px;
+.texto-portada {
+    color: white;
+    font-size: 300%;
+}
+
+.animales {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
     position: relative;
+    margin-left: 25%;
 }
 
 .aves img, .mamiferos img {
-    width: 100%;
+    width: 70%;
     height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
 }
 
 .aves figcaption, .mamiferos figcaption {
-    position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    left: 48%;
+    font-size: 300%;
 }
 
 .pie-pagina {
-    background-color: rgba(102, 208, 52, 0.9);
     color: white;
     padding: 20px;
     text-align: center;
@@ -99,7 +70,7 @@ body {
     font-size: 1.2em;
 }
 
-.pie-pagina .redes-sociales img {
-    width: 50px;
+.pie-pagina img {
+    width: 150px;
     margin-top: 10px;
 }
