@@ -1,57 +1,33 @@
-// Lista de compras inicial
-let shoppingList = [];
+var lista = [];
 
-// Referencias a elementos del DOM
-const itemInput = document.getElementById("itemInput");
-const shoppingListElement = document.getElementById("shoppingList");
-const addButton = document.getElementById("addButton");
-const removeFirstButton = document.getElementById("removeFirstButton");
-const removeLastButton = document.getElementById("removeLastButton");
-const showFirstThreeButton = document.getElementById("showFirstThreeButton");
+var articuloInput = document.getElementById("articuloInput");
+var listaCompra = document.getElementById("listaCompra");
 
-// Función para actualizar la lista en la página
-const updateShoppingListUI = () => {
-  shoppingListElement.innerHTML = ""; // Limpiar lista
-  shoppingList.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    shoppingListElement.appendChild(li);
-  });
-};
+function actualizarLista(array) {
+  listaCompra.innerHTML = array.join(", ");
+}
 
-// Añadir artículo
-addButton.addEventListener("click", () => {
-    const newItem = itemInput.value.trim();
-    if (newItem) {
-      shoppingList.push(newItem); // Añadir artículo
-      updateShoppingListUI();
-    }
-  });
-  
+function anadir() {
+  var valor = articuloInput.value;
+  lista.push(valor);
+  actualizarLista(lista);
+}
 
-// Eliminar el primer artículo
-removeFirstButton.addEventListener("click", () => {
-  if (shoppingList.length > 0) {
-    shoppingList.shift(); // Usar shift para eliminar el primero
-    updateShoppingListUI();
+function eliminaPrimero() {
+  if (lista.length > 0) {
+    lista.shift();
+    actualizarLista(lista);
   }
-});
+}
 
-// Eliminar el último artículo
-removeLastButton.addEventListener("click", () => {
-  if (shoppingList.length > 0) {
-    shoppingList.pop(); // Usar pop para eliminar el último
-    updateShoppingListUI();
+function eliminaUltimo() {
+  if (lista.length > 0) {
+    lista.pop();
+    actualizarLista(lista);
   }
-});
+}
 
-// Mostrar los tres primeros artículos
-showFirstThreeButton.addEventListener("click", () => {
-  const firstThreeItems = shoppingList.slice(0, 3); // Usar slice para obtener los primeros 3
-  shoppingListElement.innerHTML = ""; // Limpiar lista
-  firstThreeItems.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    shoppingListElement.appendChild(li);
-  });
-});
+function mostrarPrimeros() {
+  var primerosTres = lista.slice(0, 3);
+  listaCompra.innerHTML = primerosTres.join(", ");
+}

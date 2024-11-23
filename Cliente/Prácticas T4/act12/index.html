@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Lista de Compras</title>
+  <title>Actividad 12</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Lista de Compras</h1>
-    <input type="text" id="itemInput" placeholder="Añadir artículo">
-    <br>
-    <button id="addButton">Añadir</button>
-    <button id="removeFirstButton">Eliminar Primero</button>
-    <button id="removeLastButton">Eliminar Último</button>
-    <button id="showFirstThreeButton">Mostrar 3 Primeros</button>
-    <ul id="shoppingList"></ul>
-  </div>
+  <h1>Lista de Compras</h1>
+  <input type="text" id="articuloInput" placeholder="Añadir artículo">
+  <br>
+  <button onclick="anadir()">Añadir</button>
+  <button onclick="eliminaPrimero()">Eliminar Primero</button>
+  <button onclick="eliminaUltimo()">Eliminar Último</button>
+  <button onclick="mostrarPrimeros()">Mostrar 3 Primeros</button>
+  <div id="listaCompra"></div>
   <script src="app.js"></script>
 </body>
 </html>
