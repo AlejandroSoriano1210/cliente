@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+    <p>Completa el JavaScript en los espacios inddicados para realizar los cálculos matemáticos y la manipulación de fechas según lo solicitado</p>
+
+    <h2>Cálculos Matemáticos</h2>
+    <p>Número aleatorio entre 1 y 100: <span id="numeroAleatorio"></span></p>
+    <p>Raíz cuadrada de 256: <span id="raizCuadrada"></span></p>
+    <p>Potencia de 3^4: <span id="potencia"></span></p>
+    <p>Redondeo de 7.8: <span id="redondeo"></span></p>
+    
+    <h2>Manipulación de Fecha</h2>
+    <p>Fecha y hora actual: <span id="fechaActual"></span></p>
+    <p>Mes actual: <span id="mesActual"></span></p>
+    <p>Año actual: <span id="anoActual"></span></p>
+    <p>Hora en formato de 12 horas: <span id="horaFormato12"></span></p>
+    
+    <h2>Validación de Expresión Regular</h2>
+    <p>Comprueba si el siguiente texto es un email válido: "ejemplo@correo.com"</p>
+    <p>Email Válido: <span id="validoEmail"></span></p>
+
+    <script>
+        document.getElementById("numeroAleatorio").innerHTML = Math.ceil(Math.random()*100);
+        document.getElementById("raizCuadrada").innerHTML = Math.sqrt(256);
+        document.getElementById("potencia").innerHTML = Math.pow(3,4);
+        document.getElementById("redondeo").innerHTML = Math.floor(7.8);
+
+        var fechaAhora = new Date;
+        var mesActual = fechaAhora.getMonth();
+        var anoActual = fechaAhora.getFullYear();
+        document.getElementById("fechaActual").innerHTML = fechaAhora;
+        document.getElementById("mesActual").innerHTML = mesActual.toString();
+        document.getElementById("anoActual").innerHTML = anoActual.toString();
+        document.getElementById("horaFormato12").innerHTML = fechaAhora;
+
+        var regExp = /^(.+\@.+\..+)$/;
+        document.getElementById("validoEmail").innerHTML = regExp.test("ejemplo@correo.com");
+    </script>
+</body>
+</html>
