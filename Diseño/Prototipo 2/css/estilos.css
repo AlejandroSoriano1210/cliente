@@ -4,9 +4,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient( #FAFAFA 6%, #98C1FF 14%, #98C1FF 86%, #66D034 89%);
-
+    background: linear-gradient( #FAFAFA 6%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
 a {
@@ -21,6 +19,11 @@ header {
     justify-content: space-between;
 }
 
+header .nombre {
+    width: 578px;
+    height: 145px;
+}
+
 .portada {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -28,14 +31,34 @@ header {
     position: relative;
 }
 
-.img-portada .texto-portada {
-    position: absolute;
-    top: 50%;
+figure img {
+    width: 80%;
+    height: auto;
 }
 
-.texto-portada {
+.img-portada .inter-texto-portada {
+    position: absolute;
+    top: 31%;
+    left: 13%;
+    text-wrap: wrap;
+}
+
+.inter-texto-portada-strong {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 80px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.inter-texto-portada {
     color: white;
-    font-size: 300%;
+    font-size: 64px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .animales {
@@ -44,33 +67,45 @@ header {
     grid-template-columns: 1fr 1fr;
     text-align: center;
     position: relative;
-    margin-left: 25%;
+    margin-left: 22.5%;
+    margin-bottom: 80px;
 }
 
-.aves img, .mamiferos img {
-    width: 70%;
+.aves , .mamiferos {
+    width: 90%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }
 
 .aves figcaption, .mamiferos figcaption {
     bottom: 10px;
-    left: 48%;
     font-size: 300%;
 }
 
 .pie-pagina {
-    color: white;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.301);
 }
 
 .pie-pagina .derechos {
+    position: absolute;
+    text-align: center;
+    left: 50%;
     font-size: 1.2em;
+    transform: translateX(-50%);
 }
 
 .pie-pagina img {
-    width: 150px;
-    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1.5%;
+    width: 200px;
+    height: auto;
 }
