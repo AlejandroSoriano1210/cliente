@@ -1,6 +1,5 @@
 var tareas = [];
 
-// Añadir una nueva tarea
 function anadir() {
     var tareaInput = document.getElementById('tareaInput');
     var nombreTarea = tareaInput.value.trim();
@@ -13,27 +12,17 @@ function anadir() {
     }
 }
 
-// Marcar tarea como completada
-document.getElementById('marcarCompletada').addEventListener('change', () => {
+function marcarPorNumero() {
     var indice = parseInt(document.getElementById('marcarCompletada').value);
-    if (!isNaN(indice) && indice >= 0 && indice < tareas.length) {
-        tareas[indice].completada = true;
-        renderizarTareas();
-    } else {
-        alert("Por favor, ingresa un índice válido.");
-    }
-});
+    tareas[indice].completada = true;
+    renderizarTareas();
+}
 
-// Eliminar tarea específica
-document.getElementById('eliminarEspecifico').addEventListener('change', () => {
+function eliminarPorNumero() {
     var indice = parseInt(document.getElementById('eliminarEspecifico').value);
-    if (!isNaN(indice) && indice >= 0 && indice < tareas.length) {
-        tareas.splice(indice, 1);
-        renderizarTareas();
-    } else {
-        alert("Por favor, ingresa un índice válido.");
-    }
-});
+    tareas.splice(indice, 1);
+    renderizarTareas();
+}
 
 // Mostrar tareas completadas
 function mostrarCompletadas() {
@@ -47,18 +36,8 @@ function mostrarPendientes() {
     renderizarTareas(tareasPendientes);
 }
 
-// Renderizar la lista de tareas
-function renderizarTareas(filtro = null) {
-    var listaTareas = document.getElementById('listaTareas');
-    listaTareas.innerHTML = '';
+function renderizarTareas() {
 
-    var tareasAMostrar = filtro || tareas;
-    tareasAMostrar.forEach((tarea, index) => {
-        var tareaElemento = document.createElement('div');
-        tareaElemento.textContent = `${index}: ${tarea.nombre} - ${tarea.completada ? 'Completada' : 'Pendiente'}`;
-        listaTareas.appendChild(tareaElemento);
-    });
 }
 
-// Renderizar inicialmente la lista de tareas vacía
 renderizarTareas();
