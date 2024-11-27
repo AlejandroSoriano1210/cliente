@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Actividad 13</title>
 </head>
 <body>
-    <script>
-        document.write("parse " + Date.parse("April 20,2012") + "<br>") 
-        var later = new Date("August 13,2012");
-        document.write("to-DateString " + later.toDateString() + "<br>")
-        document.write("to-localDateString " + later.toLocaleDateString() +
-        "<br>")
-        document.write("toTimeString " + later.toTimeString() + "<br>")
-        document.write("toLocaleTimeString " + later.toLocaleTimeString() +
-        "<br>")
-        document.write("toGMTString " + later.toGMTString() + "<br>")
-        document.write("toUTCString " + later.toUTCString() + "<br>")
-        document.write("toString " + later.toString() + "<br>")
-        document.write("toLocaleString " + later.toLocaleString() + "<br>")
-        document.write("toISOString " + later.toISOString() + "<br>") 
-    </script>    
+    <h1>Tareas</h1>
+    <input type="text" id="tareaInput" placeholder="Añadir tarea">
+    <button onclick="anadir()">Añadir</button>
+    <br><br>
+    <h2>Marcar tarea como completada</h2>
+    <input type="number" id="marcarCompletada" placeholder="Número de tarea">
+    <button onclick="marcarPorNumero()">Marcar como completada</button>
+    <br><br>
+    <h2>Eliminar tarea específica</h2>
+    <input type="number" id="eliminarEspecifico" placeholder="Número de tarea">
+    <button onclick="eliminarPorNumero()">Eliminar tarea</button>
+    <br><br>
+    <h2>Opciones de visualización</h2>
+    <button onclick="mostrarCompletadas()">Mostrar completadas</button>
+    <button onclick="mostrarPendientes()">Mostrar pendientes</button>
+    <div id="listaTareas"></div>
+    <script src="lab.js"></script>
 </body>
 </html>
