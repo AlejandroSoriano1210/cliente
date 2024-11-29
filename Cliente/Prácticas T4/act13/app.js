@@ -1,43 +1,45 @@
 var tareas = [];
 
+var tareaNueva = document.getElementById('tarea');
+var listaTareas = document.getElementById('listaTareas');
+
+function renderizarTareas(array) {
+    listaTareas.innerHTML = array.map(tarea => tarea.nombre+" ("+tarea.completada+")"+"<br>").join(" ");
+}
+
 function anadir() {
-    var tareaInput = document.getElementById('tareaInput');
-    var nombreTarea = tareaInput.value.trim();
-    if (nombreTarea) {
-        tareas.push({ nombre: nombreTarea, completada: false });
-        tareaInput.value = '';
-        renderizarTareas();
-    } else {
-        alert("Por favor, escribe una tarea.");
-    }
+    var tareaNombre = tareaNueva.value;
+    tareas.push({ nombre: tareaNombre, completada: "pendiente" });
+    renderizarTareas(tareas);
 }
 
 function marcarPorNumero() {
     var indice = parseInt(document.getElementById('marcarCompletada').value);
-    tareas[indice].completada = true;
-    renderizarTareas();
+    tareas = tareas.map((tarea, index) => {
+        if (index + 1 === indice) {
+            tarea.completada = "hecha";
+        }
+        return tarea;
+    });
+    renderizarTareas(tareas);
 }
 
 function eliminarPorNumero() {
     var indice = parseInt(document.getElementById('eliminarEspecifico').value);
-    tareas.splice(indice, 1);
-    renderizarTareas();
+    tareas.splice(indice - 1, 1);
+    renderizarTareas(tareas);
 }
 
-// Mostrar tareas completadas
 function mostrarCompletadas() {
-    var tareasCompletadas = tareas.filter(tarea => tarea.completada);
+    var tareasCompletadas = tareas.filter(tarea => tarea.completada === "hecha");
     renderizarTareas(tareasCompletadas);
 }
 
-// Mostrar tareas pendientes
 function mostrarPendientes() {
-    var tareasPendientes = tareas.filter(tarea => !tarea.completada);
+    var tareasPendientes = tareas.filter(tarea => tarea.completada === "pendiente");
     renderizarTareas(tareasPendientes);
 }
 
-function renderizarTareas() {
-
+function mostrarTodas() {
+    renderizarTareas(tareas);
 }
-
-renderizarTareas();
