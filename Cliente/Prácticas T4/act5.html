@@ -6,6 +6,7 @@
     <title>Actividad 5</title>
 </head>
 <body>
+    <h1>Array de Palabras</h1>
     <label for="">Introduzca palabras:
         <input type="text" id="entrada">
     </label>
@@ -23,8 +24,19 @@
             })
 
             var total = palabras.length;
+            var copia = palabras.slice();
+            var copia2 = palabras.slice();
+            var az = copia.sort();
+            var za = copia2.sort().reverse();
             
-            document.getElementById('listaPalabras').innerHTML = "<br>Palabras: "+palabras+"<br>Palabras invertidas: "+invertidas+"<br>Primera palabra: "+palabras[0]+"<br>Última palabra: "+palabras[palabras.length - 1]+"<br>Número de palabras: "+total+"<br>Palabras ordenadas (a-z): "+palabras.sort()+"<br>Palabras ordenadas (z-a): "+palabras.sort().reverse();
+            document.getElementById('listaPalabras').innerHTML = 
+            "<br>Palabras: "+palabras.join(', ')+
+            "<br>Palabras invertidas: "+invertidas.join(', ')+
+            "<br>Primera palabra: "+palabras[0]+
+            "<br>Última palabra: "+palabras[palabras.length - 1]+
+            "<br>Número de palabras: "+total+
+            "<br>Palabras ordenadas (a-z): "+az.join(', ')+
+            "<br>Palabras ordenadas (z-a): "+za.join(', ');
         }
 
     </script>

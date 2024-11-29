@@ -41,7 +41,7 @@
             if (posicion !== -1) {
 
                 numImpares.splice(posicion, 1);
-                document.getElementById('valorIntroducido').innerHTML = "<br>El valor "+valor+" se encuentra en la posición: "+posicion;
+                document.getElementById('valorIntroducido').innerHTML = "<br>El valor "+valor+" se encuentra en la posición: "+(posicion + 1);
                 
             } else {
                 document.getElementById('valorIntroducido').innerHTML = "<br>El valor "+valor+" no se encuentra en el array, pruebe con un número impar";
