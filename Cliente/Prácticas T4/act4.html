@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <label for="">Introduzca un valor:
+        <input type="number" id="valor">
+    </label>
+    <button onclick="mostrarValor()">Mostrar</button>
+    <div class="valorIntroducido"></div>
+    <script>
+        var numImpares = [];
+
+        for(let i=1; i <= 21; i += 2) {
+            numImpares.push(i);
+        }
+        document.write("<br><br>Array: "+numImpares);
+
+        var sumatorio = numImpares.reduce((total, num) => total + num, 0);
+        document.write("<br>Sumatorio: "+sumatorio);
+
+        var numInverso = numImpares.reverse();
+        document.write("<br>Invertido: "+numInverso);
+
+        function mostrarValor() {
+            var valor = document.getElementById('valor').value;
+
+            for(var j = 0; j <= numImpares.length; j++) {
+                if (valor == numImpares[j]) {
+                    document.getElementById('valorIntroducido').innerHTML = "El valor introducido está en la posicion "+j+" de el array";
+                } else {
+                    document.getElementById('valorIntroducido').innerHTML = "El valor introducido no está";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

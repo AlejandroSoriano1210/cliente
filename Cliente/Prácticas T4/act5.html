@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+</head>
+<body>
+    <label for="">Introduzca palabras:
+        <input type="text" id="entrada">
+    </label>
+    <button onclick="enviarEntrada()">Enviar</button>
+
+    <div id="listaPalabras"></div>
+    <script>
+        var palabras = [];
+
+        function enviarEntrada() {
+            palabras.push(document.getElementById('entrada').value);
+
+            var invertidas = palabras.map(palabra => {
+                return palabra.split('').reverse().join('');
+            })
+
+            var total = palabras.length;
+            
+            document.getElementById('listaPalabras').innerHTML = "<br>Palabras: "+palabras+"<br>Palabras invertidas: "+invertidas+"<br>Primera palabra: "+palabras[0]+"<br>Última palabra: "+palabras[palabras.length - 1]+"<br>Número de palabras: "+total+"<br>Palabras ordenadas (a-z): "+palabras.sort()+"<br>Palabras ordenadas (z-a): "+palabras.sort().reverse();
+        }
+
+    </script>
+</body>
+</html>
