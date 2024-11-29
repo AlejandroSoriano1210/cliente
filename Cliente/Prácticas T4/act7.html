@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var arrayNumeros = [];
+
+        for (let i = 0; i <= 10; i++) {
+            var numAleatorio = Math.floor(Math.random() * 11);
+            arrayNumeros.push(numAleatorio);
+        }
+
+        var menores = arrayNumeros.filter(menor => menor < 8);
+
+        var arrayImpar = arrayNumeros.slice();
+        
+        for (var j of arrayNumeros.keys()) {
+            if (arrayNumeros[j] % 2 !== 0) {
+                arrayImpar.fill('impar', j, j + 1);
+            }
+        }
+
+        document.getElementById('resultado').innerHTML = 
+        "<br>"+arrayNumeros.join(', ')+"<br>"+
+        "<br>"+menores.join(', ')+"<br>"+
+        "<br>"+arrayImpar.join(',  ');
+    </script>
+</body>
+</html>

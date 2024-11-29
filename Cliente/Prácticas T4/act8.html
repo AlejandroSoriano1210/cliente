@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        var arrayOriginal = [];
+
+        for (var i = 0; i <= 5; i++) {
+            arrayOriginal.push(Math.floor(Math.random() * 16) - 5);
+        }
+
+        if (arrayOriginal.every(num => num > 0)) {
+            var confirmacion = "<br>Todos los números son positivos";
+        } else {
+            confirmacion = "<br>No todos los números son positivos";
+        }
+
+        var triple = arrayOriginal.map(num => num * 3);
+
+        var copia = triple.slice();
+        var tripleMult = copia.reduce((total, num) => total * num);
+
+        document.getElementById('resultado').innerHTML = 
+        "<br>"+arrayOriginal.join(', ')+
+        "<br>"+confirmacion+"<br>"+
+        "<br>"+triple.join(', ')+"<br>"+
+        "<br>"+tripleMult;
+
+    </script>
+</body>
+</html>
