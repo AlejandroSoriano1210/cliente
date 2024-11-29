@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Tareas</h1>
-    <input type="text" id="tareaInput" placeholder="Añadir tarea">
+    <input type="text" id="tarea" placeholder="Añadir tarea">
     <button onclick="anadir()">Añadir</button>
     <br><br>
     <h2>Marcar tarea como completada</h2>
@@ -18,10 +18,11 @@
     <input type="number" id="eliminarEspecifico" placeholder="Número de tarea">
     <button onclick="eliminarPorNumero()">Eliminar tarea</button>
     <br><br>
-    <h2>Opciones de visualización</h2>
+    <h2>Filtro</h2>
     <button onclick="mostrarCompletadas()">Mostrar completadas</button>
     <button onclick="mostrarPendientes()">Mostrar pendientes</button>
+    <button onclick="mostrarTodas()">Todas</button>
     <div id="listaTareas"></div>
-    <script src="lab.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
