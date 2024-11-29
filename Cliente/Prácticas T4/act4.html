@@ -6,36 +6,54 @@
     <title>Actividad 4</title>
 </head>
 <body>
+    <h1>Números Impares</h1>
     <label for="">Introduzca un valor:
         <input type="number" id="valor">
     </label>
     <button onclick="mostrarValor()">Mostrar</button>
-    <div class="valorIntroducido"></div>
+    <div id="arrayOriginal"></div>
+    <div id="sumatorio"></div>
+    <div id="invertido"></div>
+    <div id="ascendente"></div>
+    <div id="descendente"></div>
+    <div id="valorIntroducido"></div>
+    <div id="arrayActualizado"></div>
+
     <script>
         var numImpares = [];
 
         for(let i=1; i <= 21; i += 2) {
             numImpares.push(i);
         }
-        document.write("<br><br>Array: "+numImpares);
+        document.getElementById('arrayOriginal').innerHTML = "<br>Array: "+numImpares;
 
         var sumatorio = numImpares.reduce((total, num) => total + num, 0);
-        document.write("<br>Sumatorio: "+sumatorio);
+        document.getElementById('sumatorio').innerHTML = "<br>Sumatorio: "+sumatorio;
 
-        var numInverso = numImpares.reverse();
-        document.write("<br>Invertido: "+numInverso);
+        var copia = numImpares.slice();
+        var numInverso = copia.reverse();
+        document.getElementById('invertido').innerHTML = "<br>Invertido: "+numInverso;
 
         function mostrarValor() {
-            var valor = document.getElementById('valor').value;
+            var valor = parseInt(document.getElementById('valor').value);
+            var posicion = numImpares.indexOf(valor);
 
-            for(var j = 0; j <= numImpares.length; j++) {
-                if (valor == numImpares[j]) {
-                    document.getElementById('valorIntroducido').innerHTML = "El valor introducido está en la posicion "+j+" de el array";
-                } else {
-                    document.getElementById('valorIntroducido').innerHTML = "El valor introducido no está";
-                }
+            if (posicion !== -1) {
+
+                numImpares.splice(posicion, 1);
+                document.getElementById('valorIntroducido').innerHTML = "<br>El valor "+valor+" se encuentra en la posición: "+posicion;
+                
+            } else {
+                document.getElementById('valorIntroducido').innerHTML = "<br>El valor "+valor+" no se encuentra en el array, pruebe con un número impar";
             }
+            document.getElementById('arrayActualizado').innerHTML = "<br>Array actualizado: "+numImpares;
         }
+
+        var ascendente = numImpares.slice().sort((a, b) => a - b);
+        var descendente = numImpares.slice().sort((a, b) => b - a);
+        document.getElementById('ascendente').innerHTML = "<br>Ascendente: "+ascendente;
+        document.getElementById('descendente'),innerHTML = "<br>Descendente: "+descendente;
+
     </script>
 </body>
 </html>
