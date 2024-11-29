@@ -10,7 +10,7 @@
         <input type="number" id="valor">
     </label>
     <button onclick="mostrarValor()">Mostrar</button>
-    <div class="valorIntroducido"></div>
+    <div id="valorIntroducido"></div>
     <script>
         var numImpares = [];
 
@@ -29,10 +29,10 @@
             var valor = document.getElementById('valor').value;
 
             for(var j = 0; j <= numImpares.length; j++) {
-                if (valor == numImpares[j]) {
+                if (valor === numImpares[j]) {
                     document.getElementById('valorIntroducido').innerHTML = "El valor introducido está en la posicion "+j+" de el array";
                 } else {
-                    document.getElementById('valorIntroducido').innerHTML = "El valor introducido no está";
+                    document.getElementById('valorIntroducido').innerHTML = "El valor "+valor+" no está";
                 }
             }
         }
