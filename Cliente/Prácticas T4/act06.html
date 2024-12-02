@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+
+<body>
+    <h1>Notas de Alumnos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Cliente</th>
+                <th>Servidor</th>
+                <th>Diseño</th>
+            </tr>
+        </thead>
+        <tbody id="tablaNotas">
+            <!-- Aquí se insertan las filas -->
+        </tbody>
+    </table>
+
+    <script>
+        var modulos = ["Cliente", "Servidor", "Diseño"];
+        var alumnos = [];
+
+        for (var i = 0; i < 5; i++) {
+
+            var nombre = prompt("Introduce el nombre del alumno " + (i + 1) + " :");
+            var notas = {};
+
+            for (var j = 0; j < modulos.length; j++) {
+
+                var nota;
+                do {
+                    nota = parseFloat(prompt("Introduce la nota de " + modulos[j] + " para " + nombre + " :"));
+                    if (isNaN(nota) || nota < 0 || nota > 10) {
+                        alert("Nota no válida. Introduzca un valor entre 0 y 10.");
+                    }
+
+                } while (isNaN(nota) || nota < 0 || nota > 10);
+
+                notas[modulos[j]] = nota;
+            }
+
+            alumnos.push({ nombre: nombre, notas: notas });
+        }
+
+        var filasHTML = "";
+
+        alumnos.forEach(alumno => {
+            filasHTML += "<tr>";
+            filasHTML += "<td>" + alumno.nombre + "</td>";
+            modulos.forEach(modulo => {
+                filasHTML += "<td>" + alumno.notas[modulo] + "</td>";
+            });
+            filasHTML += "</tr>";
+        });
+
+        document.getElementById("tablaNotas").innerHTML = filasHTML;
+    </script>
+</body>
+</html>
