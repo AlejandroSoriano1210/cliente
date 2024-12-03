@@ -22,7 +22,7 @@ header .nombre {
 }
 
 .menu-principal {
-    background: linear-gradient( #FAFAFA 7%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
+    background: linear-gradient( #FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
 .portada {
@@ -93,7 +93,7 @@ header .nombre {
 .mamiferos-html {
     display: flex;
     flex-direction: column;
-    background: linear-gradient( #98C1FF 7%, #66D034 94%);
+    background: linear-gradient( #98C1FF 14%, #66D034 25%);
     min-height: 100vh;
 }
 
@@ -106,12 +106,12 @@ header .nombre {
     gap: 270px;
 }
 
-.conejos-hamsters img , .gatos img , .perros img {
+.terrestres img {
     width: 296px;
     height: 340px;
 }
 
-.conejos-hamsters , .gatos , .perros {
+.terrestres figure {
     width: 363px;
     height: 496px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -119,13 +119,52 @@ header .nombre {
     padding-top: 10px;
 }
 
-.conejos-hamsters figcaption, .gatos figcaption , .perros figcaption {
+.terrestres figcaption {
     font-size: 45px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     padding-top: 20px;
+}
+
+.aves-html {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( #FAFAFA 14%, #98C1FF 23%);
+    min-height: 100vh;
+}
+
+.pajaros {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+    position: relative;
+    margin-left: 22.5%;
+    margin-bottom: 80px;
+}
+
+.pajaros img {
+    width: 296px;
+    height: 340px;
+}
+
+.pajaros figure {
+    width: 363px;
+    height: 496px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding-top: 10px;
+}
+
+.pajaros figcaption {
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10px;
 }
 
 .pie-pagina {
