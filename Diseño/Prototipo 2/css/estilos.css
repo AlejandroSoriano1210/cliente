@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-body {
-    background: linear-gradient( #FAFAFA 6%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
-}
-
 a {
     text-decoration: none;
     color: black;
@@ -16,12 +12,17 @@ a {
 
 header {
     display: flex;
-    justify-content: space-between;
+    gap: 30%;
+    flex-shrink: 0;
 }
 
 header .nombre {
     width: 578px;
     height: 145px;
+}
+
+.menu-principal {
+    background: linear-gradient( #FAFAFA 7%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
 .portada {
@@ -31,15 +32,17 @@ header .nombre {
     position: relative;
 }
 
-figure img {
-    width: 80%;
-    height: auto;
+.aves img , .mamiferos img{
+    width: 360px;
+    height: 563px;
 }
 
 .img-portada .inter-texto-portada {
     position: absolute;
     top: 31%;
-    left: 13%;
+    left: 22%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
     text-wrap: wrap;
 }
 
@@ -72,15 +75,57 @@ figure img {
 }
 
 .aves , .mamiferos {
-    width: 90%;
-    height: auto;
+    width: 371px;
+    height: 651px;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }
 
 .aves figcaption, .mamiferos figcaption {
     bottom: 10px;
-    font-size: 300%;
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mamiferos-html {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( #98C1FF 7%, #66D034 94%);
+    min-height: 100vh;
+}
+
+.terrestres {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 270px;
+}
+
+.conejos-hamsters img , .gatos img , .perros img {
+    width: 296px;
+    height: 340px;
+}
+
+.conejos-hamsters , .gatos , .perros {
+    width: 363px;
+    height: 496px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding-top: 10px;
+}
+
+.conejos-hamsters figcaption, .gatos figcaption , .perros figcaption {
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 20px;
 }
 
 .pie-pagina {
@@ -97,8 +142,12 @@ figure img {
     position: absolute;
     text-align: center;
     left: 50%;
-    font-size: 1.2em;
+    font-size: 20px;
     transform: translateX(-50%);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .pie-pagina img {
