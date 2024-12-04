@@ -67,6 +67,9 @@ function mostrarPuntaje() {
 
 // Función para iniciar un nuevo juego
 function nuevoJuego() {
+    // Limpiar el resultado anterior
+    document.getElementById("resultado").textContent = ''; 
+
     // Reiniciamos las variables
     cartasJugador = [generarCarta(), generarCarta()];
     cartasCrupier = [generarCarta(), generarCarta()];
@@ -100,13 +103,30 @@ function pedirCarta() {
 function plantarse() {
     jugadorPlanto = true;
 
-    // Mostramos la segunda carta del crupier cuando el jugador se planto
+    // Mostramos la segunda carta del crupier cuando el jugador se plantó
     mostrarCartas('cartas-crupier', cartasCrupier);
 
     // Actualizamos los puntajes después de plantarse
     mostrarPuntaje();
 
-    // Aquí podrías agregar la lógica para comparar las manos y determinar el ganador
+    // El crupier juega ahora, seguimos pidiendo cartas hasta llegar a 17 o más
+    jugarCrupier();
+}
+
+// Función para que el crupier juegue
+function jugarCrupier() {
+    let puntajeCrupier = calcularPuntaje(cartasCrupier);
+    
+    // El crupier sigue pidiendo cartas hasta que tenga al menos 17 puntos
+    while (puntajeCrupier < 17) {
+        const nuevaCarta = generarCarta();
+        cartasCrupier.push(nuevaCarta);
+        mostrarCartas('cartas-crupier', cartasCrupier);
+        puntajeCrupier = calcularPuntaje(cartasCrupier);
+        mostrarPuntaje();
+    }
+
+    // Determinamos al ganador después de que el crupier haya terminado de jugar
     determinarGanador();
 }
 
@@ -127,8 +147,3 @@ function determinarGanador() {
         document.getElementById("resultado").innerHTML='¡Empate!';
     }
 }
-
-// Configuramos los eventos de los botones
-document.getElementById('nuevo-juego').addEventListener('click', nuevoJuego);
-document.getElementById('pedir-carta').addEventListener('click', pedirCarta);
-document.getElementById('plantarse').addEventListener('click', plantarse);
