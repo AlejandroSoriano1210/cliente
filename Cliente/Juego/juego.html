@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
-    <script src="mazo.js"></script>
+    <!-- <script src="mazo.js"></script> -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <div class="mesa">
+        <h1 id="resultado"></h1>
+        <div class="zona-crupier">
+            <h2>Crupier</h2>
+            <div id="cartas-crupier" class="zona-cartas"></div>
+            <div id="puntaje-crupier"></div>
+        </div>
+        <div class="zona-jugador">
+            <h2>Jugador</h2>
+            <div id="cartas-jugador" class="zona-cartas"></div>
+            <div id="puntaje-jugador"></div>
+            <div class="botones">
+                <button id="nuevo-juego">Nueva Partida</button>
+                <button id="pedir-carta">Pedir Carta</button>
+                <button id="plantarse">Plantarse</button>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
-    <div id="valoresJugador"></div>
-    <div id="valoresCrupier"></div>
-    <button onclick="nuevaPartida()">Nueva Partida</button>
-    <button onclick="pedir()">Pedir Carta</button>
-    <button onclick="plantarse()">Plantarse</button>
 </body>
 </html>
