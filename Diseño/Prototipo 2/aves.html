@@ -9,9 +9,28 @@
 <body>
     <div class="aves-html">
         <header>
-            <figure class="logo"><img src="img/logo.png" alt=""></figure>
+            <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
             <figure class="nombre"><img src="img/nombre-tienda.png" alt=""></figure>
-            <button onclick="location.href='index.html'" class="menu">atras</button>
+            <nav>
+                <!-- Checkbox oculto para controlar el estado del menú -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <!-- Icono del menú hamburguesa -->
+                <label for="menu-toggle" class="hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </label>
+                <!-- Menú desplegable -->
+                <ul class="menu">
+                  <li><a href="#seccion1">Alimentación</a></li>
+                  <li><a href="#seccion2">Aseo</a></li>
+                  <li><a href="#seccion3">Arnes y correas</a></li>
+                  <li><a href="#seccion4">Antiparasitos</a></li>
+                  <li><a href="#seccion5">Accesorios</a></li>
+                  <li><a href="somos.html">¿Quiénes somos?</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+              </nav>
         </header>
         
         <section class="pajaros">

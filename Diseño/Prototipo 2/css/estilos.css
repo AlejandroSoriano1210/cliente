@@ -23,14 +23,14 @@ header .nombre {
 
 nav {
     position: relative;
+    top: 50px;
+    right: 50px;
 }
 
-/* Checkbox oculto */
 .menu-toggle {
     display: none;
 }
 
-/* Botón hamburguesa */
 .hamburger {
     width: 30px;
     height: 25px;
@@ -49,7 +49,6 @@ nav {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Efecto al activar el menú */
 .menu-toggle:checked+.hamburger .line:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
@@ -62,7 +61,6 @@ nav {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Menú desplegable */
 .menu {
     list-style: none;
     padding: 0;
@@ -77,16 +75,12 @@ nav {
     font-weight: 400;
     font-style: normal;
     transform: translateY(-1000%);
-    /* El menú comienza fuera de la pantalla */
     transition: transform 0.4s ease;
-    /* Animación de deslizamiento */
     z-index: 10;
 }
 
-/* Mostrar el menú cuando está activado */
 .menu-toggle:checked~.menu {
     transform: translateY(0);
-    /* El menú se desliza hacia abajo */
 }
 
 .menu li {
