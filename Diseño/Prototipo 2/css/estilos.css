@@ -12,7 +12,7 @@ a {
 
 header {
     display: flex;
-    gap: 30%;
+    gap: 29%;
     flex-shrink: 0;
 }
 
@@ -21,8 +21,91 @@ header .nombre {
     height: 145px;
 }
 
+nav {
+    position: relative;
+}
+
+/* Checkbox oculto */
+.menu-toggle {
+    display: none;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efecto al activar el menú */
+.menu-toggle:checked+.hamburger .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle:checked+.hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked+.hamburger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú desplegable */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-color: #f9f9f9;
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transform: translateY(-1000%);
+    /* El menú comienza fuera de la pantalla */
+    transition: transform 0.4s ease;
+    /* Animación de deslizamiento */
+    z-index: 10;
+}
+
+/* Mostrar el menú cuando está activado */
+.menu-toggle:checked~.menu {
+    transform: translateY(0);
+    /* El menú se desliza hacia abajo */
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+.menu li a:hover {
+    background-color: #f1f1f1;
+}
+
 .menu-principal {
-    background: linear-gradient( #FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
+    background: linear-gradient(#FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
 .portada {
@@ -32,7 +115,8 @@ header .nombre {
     position: relative;
 }
 
-.aves img , .mamiferos img{
+.aves img,
+.mamiferos img {
     width: 360px;
     height: 563px;
 }
@@ -74,14 +158,16 @@ header .nombre {
     margin-bottom: 80px;
 }
 
-.aves , .mamiferos {
+.aves,
+.mamiferos {
     width: 371px;
     height: 651px;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }
 
-.aves figcaption, .mamiferos figcaption {
+.aves figcaption,
+.mamiferos figcaption {
     bottom: 10px;
     font-size: 45px;
     font-family: "Inter", sans-serif;
@@ -93,7 +179,7 @@ header .nombre {
 .mamiferos-html {
     display: flex;
     flex-direction: column;
-    background: linear-gradient( #98C1FF 14%, #66D034 25%);
+    background: linear-gradient(#98C1FF 13%, #66D034 25%);
     min-height: 100vh;
 }
 
@@ -115,8 +201,8 @@ header .nombre {
     width: 363px;
     height: 496px;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    padding-top: 10px;
+    border-radius: 50px;
+    padding-top: 30px;
 }
 
 .terrestres figcaption {
@@ -131,40 +217,46 @@ header .nombre {
 .aves-html {
     display: flex;
     flex-direction: column;
-    background: linear-gradient( #FAFAFA 14%, #98C1FF 23%);
+    background: linear-gradient(#FAFAFA 13%, #98C1FF 23%);
     min-height: 100vh;
 }
 
 .pajaros {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     text-align: center;
     position: relative;
-    margin-left: 22.5%;
+    padding-top: 80px;
+    margin-left: 31.5%;
     margin-bottom: 80px;
+    max-width: 819px;
 }
 
 .pajaros img {
-    width: 296px;
-    height: 340px;
+    width: 203px;
+    height: 208px;
 }
 
 .pajaros figure {
-    width: 363px;
-    height: 496px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    padding-top: 10px;
+    border: 3px solid black;
+    border-radius: 90px;
+    padding: 20px;
+    position: relative;
+    margin-top: 37px;
 }
 
 .pajaros figcaption {
+    display: block;
+    margin: 50px;
     font-size: 45px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding-top: 10px;
 }
 
 .pie-pagina {
