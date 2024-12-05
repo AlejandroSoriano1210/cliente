@@ -4,15 +4,12 @@
 }
 
 a {
-    text-decoration: none;
     color: black;
-    width: fit-content;
-    height: fit-content;
 }
 
 header {
     display: flex;
-    gap: 29%;
+    gap: 25%;
     flex-shrink: 0;
 }
 
@@ -32,8 +29,8 @@ nav {
 }
 
 .hamburgesa {
-    width: 30px;
-    height: 25px;
+    width: 40px;
+    height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,7 +47,7 @@ nav {
 }
 
 .menu-toggle:checked+.hamburgesa .linea:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
 }
 
 .menu-toggle:checked+.hamburgesa .linea:nth-child(2) {
@@ -58,7 +55,7 @@ nav {
 }
 
 .menu-toggle:checked+.hamburgesa .linea:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
 }
 
 .menu {
@@ -67,15 +64,15 @@ nav {
     margin: 0;
     position: absolute;
     top: 50px;
-    right: 0px;
+    right: 5px;
     background-color: #dff3d5;
-    font-size: 45px;
+    font-size: 40px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    transform: translateY(-1000%);
-    transition: transform 0.4s ease;
+    transform: translateY(-500%);
+    transition: transform 0.45s ease-in-out;
     z-index: 10;
 }
 
@@ -84,21 +81,25 @@ nav {
 }
 
 .menu li {
-    margin: 0;
+    margin-left: 10px;
+    width: 100%;
 }
 
 .menu li a {
     text-decoration: none;
     color: black;
     display: block;
-    padding: 10px;
+    width: 100%;
 }
 
 .menu li a:hover {
     background-color: #ffffff;
+    width: 100%;
 }
 
-.menu-principal , .somos , .contacto {
+.menu-principal,
+.somos,
+.contacto {
     background: linear-gradient(#FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
@@ -150,6 +151,13 @@ nav {
     position: relative;
     margin-left: 22.5%;
     margin-bottom: 80px;
+}
+
+.animales a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: fit-content;
 }
 
 .aves,
@@ -254,6 +262,7 @@ nav {
 }
 
 .somos-img {
+    border-radius: 15px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -263,44 +272,82 @@ nav {
 .titulo-somos {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
+    margin-top: 100px;
     border-radius: 15px;
-    text-align: center;
-}
-
-.titulo-somos p {
     font-size: 70px;
-    color: #45B81F;
-    font-family: "Inter", serif;
+    color: #33771c;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-}
-
-.pie-pagina {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: black;
-    padding: 3%;
-    background-color: rgba(255, 255, 255, 0.301);
-}
-
-.pie-pagina .derechos {
-    position: absolute;
     text-align: center;
-    left: 50%;
-    font-size: 20px;
-    transform: translateX(-50%);
+}
+
+.quienes-somos {
+    display: flex;
+    padding: 0;
+    margin-right: 250px;
+    margin-top: 64px;
+    margin-left: 250px;
+    margin-bottom: 137px;
+}
+
+.imagenes {
+    align-content: center;
+    margin-right: 10px;
+}
+
+.imagenes img {
+    margin-bottom: 25px;
+}
+
+.quienes-somos p {
     font-family: "Inter", sans-serif;
+    font-size: 35px;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.texto-somos {
+    width: 793px;
+    height: 530px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-.pie-pagina img {
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    align-items: center;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+footer .derechos {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    font-size: 20px;
+    transform: translateX(-50%);
+}
+
+footer img {
     position: absolute;
     right: 0;
     bottom: 0;
