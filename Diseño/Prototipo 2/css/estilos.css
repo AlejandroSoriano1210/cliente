@@ -31,7 +31,7 @@ nav {
     display: none;
 }
 
-.hamburger {
+.hamburgesa {
     width: 30px;
     height: 25px;
     display: flex;
@@ -41,7 +41,7 @@ nav {
     margin: 10px;
 }
 
-.hamburger .line {
+.hamburgesa .linea {
     width: 100%;
     height: 4px;
     background-color: black;
@@ -49,15 +49,15 @@ nav {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.menu-toggle:checked+.hamburger .line:nth-child(1) {
+.menu-toggle:checked+.hamburgesa .linea:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
 
-.menu-toggle:checked+.hamburger .line:nth-child(2) {
+.menu-toggle:checked+.hamburgesa .linea:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle:checked+.hamburger .line:nth-child(3) {
+.menu-toggle:checked+.hamburgesa .linea:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
 
@@ -98,7 +98,7 @@ nav {
     background-color: #f1f1f1;
 }
 
-.menu-principal {
+.menu-principal , .somos , .contacto {
     background: linear-gradient(#FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
 }
 
@@ -250,6 +250,31 @@ nav {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    font-style: normal;
+}
+
+.somos-img {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.titulo-somos {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.titulo-somos p {
+    font-size: 70px;
+    color: #45B81F;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
     font-style: normal;
 }
 
