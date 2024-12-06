@@ -9,7 +9,7 @@ a {
 
 header {
     display: flex;
-    gap: 25%;
+    gap: 30%;
     flex-shrink: 0;
 }
 
@@ -59,6 +59,7 @@ nav {
 }
 
 .menu {
+    width: 400px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -81,15 +82,19 @@ nav {
 }
 
 .menu li {
-    margin-left: 10px;
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 
 .menu li a {
-    text-decoration: none;
-    color: black;
     display: block;
     width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
 }
 
 .menu li a:hover {
@@ -287,16 +292,18 @@ nav {
 
 .quienes-somos {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    margin-right: 250px;
-    margin-top: 64px;
-    margin-left: 250px;
-    margin-bottom: 137px;
+    margin: 64px 250px 137px 250px;
 }
 
 .imagenes {
-    align-content: center;
-    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 50px;
 }
 
 .imagenes img {
@@ -323,6 +330,113 @@ nav {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contacto .foto-contacto {
+    display: block;
+    margin: 100px auto;
+}
+
+.contacto h1 {
+    background-color: rgba(255, 255, 255, 0.425);
+    color: #33771c;
+    font-family: "Inter", sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto-seccion {
+    display: flex;
+    position: relative;
+    gap: 200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.contacto-info {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 450px;
+    height: 250px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contacto-info .logo-nombre {
+    width: 290px;
+    height: auto;
+}
+
+.contacto-info .logo-dibujo {
+    width: 150px;
+    height: auto;
+}
+
+.contacto-form {
+    position: relative;
+    background-color: #d4e9ff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contacto-form h2, .contacto-info h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.contacto-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contacto-form input, .contacto-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton-enviar {
+    background-color: #4fa129;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton-enviar:hover {
+    background-color: #4CAF50;
 }
 
 footer {
