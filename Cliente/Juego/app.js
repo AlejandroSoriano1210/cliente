@@ -61,6 +61,8 @@ function esBlackjack(cartas) {
 }
 
 function nuevoJuego() {
+    mazo = crearMazo();
+
     document.getElementById("resultado").innerHTML = ''; 
 
     cartasJugador = [generarCarta(), generarCarta()];
@@ -78,10 +80,14 @@ function nuevoJuego() {
     
     if (tieneBlackjackCrupier && tieneBlackjackJugador) {
         document.getElementById("resultado").innerHTML = "Empate, ambos tienen Blackjack.";
+        mostrarCartas('cartas-crupier', cartasCrupier);
+        mostrarPuntaje();
         bloquearBotones();
     } 
     else if (tieneBlackjackCrupier) {
         document.getElementById("resultado").innerHTML = "El crupier tiene Blackjack, has perdido.";
+        mostrarCartas('cartas-crupier', cartasCrupier);
+        mostrarPuntaje();
         bloquearBotones();
     }
 
@@ -106,25 +112,41 @@ function plantarse() {
 
     mostrarPuntaje();
 
-    jugarCrupier();
+    var puntajeJugador = calcularPuntaje(cartasJugador);
 
-    bloquearBotones();
+    if (puntajeJugador > 21) {
+        document.getElementById("resultado").innerHTML = '¡El jugador ha perdido!';
+        bloquearBotones();
+
+    } else {
+
+        jugarCrupier();
+    }
 }
 
 function jugarCrupier() {
     var puntajeCrupier = calcularPuntaje(cartasCrupier);
     var puntajeJugador = calcularPuntaje(cartasJugador);
 
-    while (puntajeCrupier < 17 || puntajeCrupier < puntajeJugador && puntajeCrupier < 21) {
-        var nuevaCarta = generarCarta();
-        cartasCrupier.push(nuevaCarta);
-        mostrarCartas('cartas-crupier', cartasCrupier);
-        puntajeCrupier = calcularPuntaje(cartasCrupier);
-        mostrarPuntaje();
+    function robarCartaConRetraso() {
+        if (puntajeCrupier < 17 || (puntajeCrupier < puntajeJugador && puntajeCrupier < 21)) {
+            var nuevaCarta = generarCarta();
+            cartasCrupier.push(nuevaCarta);
+            mostrarCartas('cartas-crupier', cartasCrupier);
+            puntajeCrupier = calcularPuntaje(cartasCrupier);
+            mostrarPuntaje();
+
+            setTimeout(robarCartaConRetraso, 900);
+
+        } else {
+
+            determinarGanador();
+        }
     }
 
-    determinarGanador();
+    robarCartaConRetraso();
 }
+
 
 function determinarGanador() {
     var puntajeJugador = calcularPuntaje(cartasJugador);
