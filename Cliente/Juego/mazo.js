@@ -22,15 +22,3 @@ function generarCarta() {
     
     return carta;
 }
-
-function mostrarCartas(zona, cartas) {
-    const contenedor = document.getElementById(zona);
-    contenedor.innerHTML = '';
-
-    cartas.forEach(carta => {
-        const divCarta = document.createElement('div');
-        divCarta.classList.add('carta');
-        divCarta.innerHTML = carta.valor + carta.palo;
-        contenedor.appendChild(divCarta);
-    });
-}

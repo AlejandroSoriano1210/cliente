@@ -41,29 +41,31 @@ function mostrarPuntaje() {
     if (jugadorPlanto) {
         puntajeCrupier = calcularPuntaje(cartasCrupier);
     }
-    document.getElementById('puntaje-jugador').innerHTML = "Puntaje Jugador: "+puntajeJugador;
-    document.getElementById('puntaje-crupier').innerHTML = "Puntaje Crupier: "+puntajeCrupier;
+    document.getElementById('puntaje-jugador').innerHTML = "Puntaje Jugador: " + puntajeJugador;
+    document.getElementById('puntaje-crupier').innerHTML = "Puntaje Crupier: " + puntajeCrupier;
 }
 
-function esBlackjack(cartas) {
-    var tieneAs = false;
-    var tieneCartaValor10 = false;
+function mostrarCartas(zona, cartas) {
+    const contenedor = document.getElementById(zona);
+    contenedor.innerHTML = '';
 
     cartas.forEach(carta => {
-        if (carta.valor === 'A') {
-            tieneAs = true;
-        } else if (['K', 'Q', 'J', '10'].includes(carta.valor)) {
-            tieneCartaValor10 = true;
-        }
-    });
+        const divCarta = document.createElement('div');
+        divCarta.classList.add('carta');
 
-    return tieneAs && tieneCartaValor10 && cartas.length === 2;
+        if (carta.palo === "♥" || carta.palo === "♦") {
+            divCarta.classList.add('rojo');
+        }
+
+        divCarta.innerHTML = carta.valor + carta.palo;
+        contenedor.appendChild(divCarta);
+    });
 }
 
 function nuevoJuego() {
     mazo = crearMazo();
 
-    document.getElementById("resultado").innerHTML = ''; 
+    document.getElementById("resultado").innerHTML = '';
 
     cartasJugador = [generarCarta(), generarCarta()];
     cartasCrupier = [generarCarta(), generarCarta()];
@@ -77,13 +79,13 @@ function nuevoJuego() {
 
     var tieneBlackjackCrupier = esBlackjack(cartasCrupier);
     var tieneBlackjackJugador = esBlackjack(cartasJugador);
-    
+
     if (tieneBlackjackCrupier && tieneBlackjackJugador) {
         document.getElementById("resultado").innerHTML = "Empate, ambos tienen Blackjack.";
         mostrarCartas('cartas-crupier', cartasCrupier);
         mostrarPuntaje();
         bloquearBotones();
-    } 
+    }
     else if (tieneBlackjackCrupier) {
         document.getElementById("resultado").innerHTML = "El crupier tiene Blackjack, has perdido.";
         mostrarCartas('cartas-crupier', cartasCrupier);
@@ -93,7 +95,6 @@ function nuevoJuego() {
 
     mostrarPuntaje();
 }
-
 
 function pedirCarta() {
     if (!jugadorPlanto) {
@@ -115,7 +116,7 @@ function plantarse() {
     var puntajeJugador = calcularPuntaje(cartasJugador);
 
     if (puntajeJugador > 21) {
-        document.getElementById("resultado").innerHTML = '¡El jugador ha perdido!';
+        document.getElementById("resultado").innerHTML = '¡Te has pasado!';
         bloquearBotones();
 
     } else {
@@ -124,44 +125,61 @@ function plantarse() {
     }
 }
 
+function esBlackjack(cartas) {
+    var tieneAs = false;
+    var tieneCartaValor10 = false;
+
+    cartas.forEach(carta => {
+        if (carta.valor === 'A') {
+            tieneAs = true;
+        } else if (['K', 'Q', 'J', '10'].includes(carta.valor)) {
+            tieneCartaValor10 = true;
+        }
+    });
+
+    return tieneAs && tieneCartaValor10 && cartas.length === 2;
+}
+
 function jugarCrupier() {
     var puntajeCrupier = calcularPuntaje(cartasCrupier);
     var puntajeJugador = calcularPuntaje(cartasJugador);
 
-    function robarCartaConRetraso() {
-        if (puntajeCrupier < 17 || (puntajeCrupier < puntajeJugador && puntajeCrupier < 21)) {
-            var nuevaCarta = generarCarta();
-            cartasCrupier.push(nuevaCarta);
-            mostrarCartas('cartas-crupier', cartasCrupier);
-            puntajeCrupier = calcularPuntaje(cartasCrupier);
-            mostrarPuntaje();
+    setTimeout(() => {
 
-            setTimeout(robarCartaConRetraso, 900);
+        function robarCarta() {
+            if (puntajeCrupier < 17 || (puntajeCrupier < puntajeJugador && puntajeCrupier < 21)) {
+                var nuevaCarta = generarCarta();
+                cartasCrupier.push(nuevaCarta);
+                mostrarCartas('cartas-crupier', cartasCrupier);
+                puntajeCrupier = calcularPuntaje(cartasCrupier);
+                mostrarPuntaje();
 
-        } else {
+                setTimeout(robarCarta, 900);
 
-            determinarGanador();
+            } else {
+
+                determinarGanador();
+            }
         }
-    }
 
-    robarCartaConRetraso();
+        robarCarta();
+    }, 900);
 }
-
 
 function determinarGanador() {
     var puntajeJugador = calcularPuntaje(cartasJugador);
     var puntajeCrupier = calcularPuntaje(cartasCrupier);
 
     if (puntajeJugador > 21) {
-        document.getElementById("resultado").innerHTML='¡El jugador ha perdido!';
+        document.getElementById("resultado").innerHTML = '¡Te has pasado!';
     } else if (puntajeCrupier > 21) {
-        document.getElementById("resultado").innerHTML='¡El crupier ha perdido!';
+        document.getElementById("resultado").innerHTML = '¡El crupier se ha pasado!';
     } else if (puntajeJugador > puntajeCrupier) {
-        document.getElementById("resultado").innerHTML='¡El jugador gana!';
+        document.getElementById("resultado").innerHTML = '¡Enhorabuena, has ganado!';
     } else if (puntajeCrupier > puntajeJugador) {
-        document.getElementById("resultado").innerHTML='¡El crupier gana!';
-    } else {
-        document.getElementById("resultado").innerHTML='¡Empate!';
+        document.getElementById("resultado").innerHTML = '¡El crupier gana, mala suerte!';
+    } else if (puntajeCrupier = puntajeJugador) {
+        document.getElementById("resultado").innerHTML = '¡Es un empate!';
     }
 
     bloquearBotones();
