@@ -9,7 +9,7 @@ a {
 
 header {
     display: flex;
-    gap: 30%;
+    gap: 28%;
     flex-shrink: 0;
 }
 
@@ -266,8 +266,7 @@ nav {
     font-style: normal;
 }
 
-.somos-img {
-    border-radius: 15px;
+.somos-vid {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -339,8 +338,9 @@ nav {
     min-height: 100vh;
 }
 
-.contacto .foto-contacto {
+.contacto video {
     display: block;
+    width: 1000px;
     margin: 100px auto;
 }
 
