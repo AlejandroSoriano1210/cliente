@@ -62,7 +62,7 @@ h2 {
     animation: aparecerCarta 0.5s ease-out;
 }
 
-.carta .rojo {
+.carta.rojo {
     color: red;
 }
 
