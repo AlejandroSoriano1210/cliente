@@ -1,15 +1,15 @@
-document.onmousedown = function(event) {
-    let mensaje = "";
-    switch(event.button) {
+document.addEventListener('mousedown', function (event) {
+    let mensaje = '';
+    switch (event.button) {
         case 0:
-            mensaje = "Botón izquierdo presionado";
+            mensaje = "Botón izquierdo";
             break;
         case 1:
-            mensaje = "Botón central (rueda) presionado";
+            mensaje = "Rueda central";
             break;
         case 2:
-            mensaje = "Botón derecho presionado";
+            mensaje = "Botón derecho";
             break;
     }
     document.getElementById("mensaje").textContent = mensaje;
-};
+});
