@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 8</title>
+        <script src="act8.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Introduce tu nombre:
+            <input type="text" name="nombre" id="nombre">
+        </label>
+        <br>
+        <label for="mensaje">Mensaje:
+            <br>
+            <textarea name="mensaje" id="mensaje"></textarea>
+        </label>
+    </fieldset>
+    
+    <br>
+    Elige un color:
+    <br><input type="radio" name="color" value="R">Rojo
+    <br><input type="radio" name="color" value="G">Verde
+    <br><input type="radio" name="color" value="B">Azul
+
+    <br><br>
+    Seleciona una asignatura: 
+    <Select id="asignatura">
+        <option value="matematicas">Matemáticas</option>
+        <option value="lengua">Lengua</option>
+        <option value="religion">Religión</option>
+        <option value="plastica">Plástica</option>
+        <option value="efisica">Educación Física</option>
+    </Select>
+
+    <br><br>
+    Selecciona los días con disponibilidad:
+    <br><input type="checkbox" class="dia" name="lunes" value="Monday">Lunes
+    <br><input type="checkbox" class="dia" name="martes" value="Tuesday">Martes
+    <br><input type="checkbox" class="dia" name="miercoles" value="Wednesday">Miércoles
+    <br><input type="checkbox" class="dia" name="jueves" value="Thursday">Jueves
+    <br><input type="checkbox" class="dia" name="viernes" value="Friday">Viernes
+
+    <br><br>
+    Seleciona el día preferente: 
+    <Select>
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miercoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+    </Select>
+
+    <br><br>
+    <button type="submit" id="enviar">Haz clic para enviar información</button>
+    <button id="borrar">Comenzar a rellenar de nuevo</button>
+    <button onclick="google()">Haz clic sobre mí</button>
+</body>
+</html>
