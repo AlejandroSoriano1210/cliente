@@ -31,6 +31,8 @@ document.getElementById('enviar').addEventListener('click', function () {
 
 });
 
-function google() {
+var buton = document.getElementById('google');
+
+buton.addEventListener('click', function () {
     window.location.href = "https://www.google.com/?hl=es";
-}
+})
