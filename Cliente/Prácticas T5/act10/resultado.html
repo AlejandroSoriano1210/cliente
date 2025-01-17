@@ -15,7 +15,9 @@
         var asignatura = params.get('asignatura');
         var diaDisponible = params.get('diaDisponible').split(',');
         var diaPreferente = params.get('diaPreferente');
+        var profesor = params.get('profesor');
 
+        document.write("<h1>El correo se envió a "+profesor+"</h1>")
         document.write("<br>Nombre: "+nombre);
         document.write("<br>Mensaje: "+mensaje);
         document.write("<br>Color: "+color);

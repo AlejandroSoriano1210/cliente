@@ -15,6 +15,25 @@ document.getElementById('enviar').addEventListener('click', function () {
     }
 
     var asignatura = document.getElementById('asignatura').value;
+    var profesor = '';
+    
+    switch(asignatura){
+        case "matematicas":
+            profesor = "Manuel";
+            break;
+        case "lengua":
+            profesor = "Mariano";
+            break;
+        case "religion":
+            profesor = "Madre Eva";
+            break;
+        case "plastica":
+            profesor = "Juan Manuel";
+            break;
+        case "efisica":
+            profesor = "Antonio";
+            break;
+    }
 
     var checkbox = document.getElementsByClassName('dia');
     var diaDisponible = [];
@@ -27,7 +46,7 @@ document.getElementById('enviar').addEventListener('click', function () {
 
     var diaPreferente = document.getElementById('preferente').value;
 
-    window.open(`resultado.html?nombre=${nombre}&mensaje=${mensaje}&color=${color}&asignatura=${asignatura}&diaDisponible=${diaDisponible.join(',')}&diaPreferente=${diaPreferente}`);
+    window.open(`resultado.html?nombre=${nombre}&mensaje=${mensaje}&color=${color}&asignatura=${asignatura}&diaDisponible=${diaDisponible.join(',')}&diaPreferente=${diaPreferente}&profesor=${profesor}`);
 
 });
 
