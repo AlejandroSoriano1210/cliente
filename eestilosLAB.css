@@ -1,60 +1,87 @@
-.tabla {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 columnas iguales */
-  gap: 0; /* Elimina el espacio entre las celdas */
-  margin: 20px auto;
-  max-width: 90%;
-  border-collapse: collapse; /* Asegura bordes consistentes */
-}
-
-.fila1 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Encabezados con 6 columnas */
-  font-weight: bold;
-  color: #000078;
-  text-align: center;
-  border-bottom: 2px solid #000078; /* Línea debajo de los encabezados */
-}
-
-.fila-oscura, .fila-normal {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 columnas */
-  text-align: center;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #D0D0D0; /* Línea divisoria entre filas */
-}
-
-.fila-normal {
-  background-color: white;
-}
-
-.fila-oscura {
-  background-color: #F5F5F5;
-}
-
-.thead {
-  padding: 10px;
-  font-weight: bold;
-  color: #000078;
-  text-align: center;
-  border-bottom: 2px solid #000078; /* Línea de separación */
-}
-
-.fila-normal p, .fila-oscura p {
-  padding: 10px;
+* {
   margin: 0;
-  word-wrap: break-word;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.fila-normal a, .fila-oscura a {
-  color: #000078;
-  text-decoration: none;
-  word-wrap: break-word;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.info {
-  font-size: 0.8rem;
-  margin-top: 20px;
-  color: #000078;
-  text-align: center;
+.carrusel {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-contenido {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carrusel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilo para los controles de radio (invisibles) */
+input[type="radio"] {
+  display: none;
+}
+
+/* Flechas */
+label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+label:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Cuando el radio está seleccionado, mover el carrusel */
+#slide1:checked ~ .carrusel-contenido {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .carrusel-contenido {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carrusel-contenido {
+  transform: translateX(-200%);
+}
+
+/* Flechas que navegan en orden cíclico */
+#slide1:checked ~ label.prev {
+  visibility: hidden;
+}
+
+#slide3:checked ~ label.next {
+  visibility: hidden;
 }

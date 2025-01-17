@@ -5,6 +5,7 @@
 
 a {
     color: black;
+    text-decoration: none;
 }
 
 header {
@@ -102,83 +103,42 @@ nav {
     width: 100%;
 }
 
-.menu-principal {
+.alimentacion-html {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(#FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
-}
-
-.portada {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    position: relative;
-}
-
-.aves img,
-.mamiferos img {
-    width: 360px;
-    height: 563px;
-}
-
-.img-portada .inter-texto-portada {
-    position: absolute;
-    top: 31%;
-    left: 22%;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 30px;
-    text-wrap: wrap;
-}
-
-.inter-texto-portada-strong {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 80px;
-    font-weight: 900;
-    font-style: normal;
-}
-
-.inter-texto-portada {
-    color: white;
-    font-size: 64px;
-    text-align: left;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+    min-height: 100vh;
 }
 
 .animales {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    position: relative;
-    margin-left: 22.5%;
-    margin-bottom: 80px;
+    gap: 270px;
 }
 
-.animales a {
-    text-decoration: none;
-    color: black;
-    width: fit-content;
-    height: fit-content;
+.animales img {
+    width: 180px;
+    height: auto;
 }
 
-.aves,
-.mamiferos {
-    width: 371px;
-    height: 651px;
+.animales figure {
+    width: 363px;
+    height: 496px;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
+    border-radius: 50px;
+    padding-top: 30px;
 }
 
-.aves figcaption,
-.mamiferos figcaption {
-    bottom: 10px;
-    font-size: 45px;
+.animales figcaption {
+    font-size: 15px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    padding-top: 20px;
 }
 
 footer {
