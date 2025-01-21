@@ -6,6 +6,39 @@
     <title>Actividad 18</title>
 </head>
 <body>
+
+    <h1>Registro</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
+
+        <br><br><label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Escriba su apellidos">
+
+        <br><br><label for="contrasena">Contraseña:</label>
+        <input type="text" name="contrasena" id="contrasena" placeholder="Escriba su contraseña">
+
+        <br><br><label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" name="nacimiento" id="nacimiento">
+
+        <br><br><label for="intereses">Seleccione al menos uno de los siguientes intereses: </label>
+        <br><input type="checkbox" name="intereses" id="intereses1"> Deportes
+        <br><input type="checkbox" name="intereses" id="intereses2"> Videojuegos
+        <br><input type="checkbox" name="intereses" id="intereses3"> Moda
+        <br><input type="checkbox" name="intereses" id="intereses3"> Coches
+        <br><input type="checkbox" name="intereses" id="intereses3"> Literatura
+
+        <br><br>
+        Elige un género:
+        <br><input type="radio" name="genero" value="Hombre">Hombre
+        <br><input type="radio" name="genero" value="Mujer">Mujer
+        <br><input type="radio" name="genero" value="Binariont">No binario
+        <br><input type="radio" name="genero" value="Maradona">Maradona
+        <br><input type="radio" name="genero" value="No">Prefiero no decir
+
+        <br><br><button type="button" id="boton">Enviar</button>
+        <p id="error" hidden>Por favor, completa todos los campos.</p>
+    </form>
     <script src="act18.js"></script>
 </body>
 </html>
