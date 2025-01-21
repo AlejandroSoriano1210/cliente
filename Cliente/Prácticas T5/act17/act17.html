@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 17</title>
+    <style>
+        #bienvenida {
+            background-color: lightgreen;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        #preview {
+            width: fit-content;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bienvenida">¡Bienvenido!</div>
+
+    <div class="container">
+        <h1>Encuesta</h1>
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+            <label for="color">Color favorito:</label>
+            <select id="color" name="color">
+                <option value="">Selecciona un color</option>
+                <option value="Rojo">Rojo</option>
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Amarillo">Amarillo</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="notifications" name="notifications">
+                Deseo recibir notificaciones
+            </label>
+
+            <button type="button" id="boton">Enviar</button>
+            <p id="error">Por favor, completa todos los campos.</p>
+        </form>
+
+        <div id="preview"></div>
+        <div id="resumen"></div>
+    </div>
+
+    <script src="act17.js"></script>
+</body>
+</html>
