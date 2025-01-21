@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conejos y Hamsters</title>
     <link rel="stylesheet" href="css/conejos.css">
 </head>
+
 <body>
     <div class="conejos-html">
         <header>
@@ -29,39 +31,62 @@
                 </ul>
             </nav>
         </header>
-        
+
         <section class="conejos-hamsters">
-            <figure>
-                <img src="img/enano.png" alt="">
-                <figcaption>Twinky</figcaption>
-                <figcaption>Conejo Enano</figcaption>
-                </figure>
+            <ul class="tabs-menu">
+                <li><a href="#tab1">Twinky - Conejo Enano</a></li>
+                <li><a href="#tab2">Dumbo - Conejo Bellier</a></li>
+                <li><a href="#tab3">Lola - Conejo Enano Holandés</a></li>
+                <li><a href="#tab4">Mochi - Hámster Ruso</a></li>
+                <li><a href="#tab5">Chispa - Hámster de Roborowski</a></li>
+            </ul>
 
-            <figure>
-                <img src="img/bellier.png" alt="">
-                <figcaption>Dumbo</figcaption>
-                <figcaption>Conejo Bellier</figcaption>
-                </figure>
+            <div id="tab1" class="tab-content">
+                <a href="#" class="cerrar">X</a>
+                <img src="img/enano.png" alt="Conejo Enano">
+                <div class="descripcion">
+                    <h2>Twinky</h2>
+                    <p>Conejo Enano. Un conejo de tamaño pequeño, perfecto para hogares pequeños.</p>
+                </div>
+            </div>
 
-            <figure>
-                <img src="img/holandes.png" alt="">
-                <figcaption>Lola</figcaption>
-                <figcaption>Conejo Enano Holandés</figcaption>
-            </figure>
+            <div id="tab2" class="tab-content">
+                <a href="#" class="cerrar">X</a>
+                <img src="img/bellier.png" alt="Conejo Bellier">
+                <div class="descripcion">
+                    <h2>Dumbo</h2>
+                    <p>Conejo Bellier. Conejo con orejas grandes y caídas, amigable y cariñoso.</p>
+                </div>
+            </div>
 
-            <figure>
-                <img src="img/ham-ruso.png" alt="">
-                <figcaption>Mochi</figcaption>
-                <figcaption>Hámster Ruso</figcaption>
-                </figure>
+            <div id="tab3" class="tab-content">
+                <a href="#" class="cerrar">X</a>
+                <img src="img/holandes.png" alt="Conejo Enano Holandés">
+                <div class="descripcion">
+                    <h2>Lola</h2>
+                    <p>Conejo Enano Holandés. Pequeño y con una personalidad muy activa.</p>
+                </div>
+            </div>
 
-            <figure>
-                <img src="img/roborowski.png" alt="">
-                <figcaption>Chispa</figcaption>
-                <figcaption>Hámster de Roborowski</figcaption>
-                </figure>
+            <div id="tab4" class="tab-content">
+                <a href="#" class="cerrar">X</a>
+                <img src="img/ham-ruso.png" alt="Hámster Ruso">
+                <div class="descripcion">
+                    <h2>Mochi</h2>
+                    <p>Hámster Ruso. Muy pequeño y de carácter muy sociable.</p>
+                </div>
+            </div>
+
+            <div id="tab5" class="tab-content">
+                <a href="#" class="cerrar">X</a>
+                <img src="img/roborowski.png" alt="Hámster de Roborowski">
+                <div class="descripcion">
+                    <h2>Chispa</h2>
+                    <p>Hámster de Roborowski. El hámster más pequeño y rápido, ideal para observación.</p>
+                </div>
+            </div>
         </section>
-        
+
         <footer class="pie-pagina">
             <img src="img/by.svg" alt="">
             <p class="derechos">© 2024 Huellas Felices. <br> Todos los derechos reservados.</p>

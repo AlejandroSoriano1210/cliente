@@ -111,41 +111,78 @@ nav {
 }
 
 .conejos-hamsters {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    position: relative;
-    padding-top: 80px;
-    margin-left: 30%;
-    margin-bottom: 80px;
-    max-width: 819px;
-}
-
-.conejos-hamsters img {
-    width: 203px;
-    height: 208px;
-}
-
-.conejos-hamsters figure {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 3px solid black;
-    border-radius: 90px;
-    padding: 20px;
-    position: relative;
-    margin-top: 37px;
+    flex-grow: 1;
 }
 
-.conejos-hamsters figcaption {
+.tabs-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.tabs-menu li {
     display: block;
-    margin-left: 50px;
-    font-size: 45px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    width: fit-content;
+    margin: 15px;
+}
+
+.tabs-menu li a {
+    display: block;
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 18px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabs-menu li a:hover {
+    background-color: #bbb;
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tab-content img {
+    width: 250px;
+    height: auto;
+}
+
+.tab-content:target {
+    display: block;
+}
+
+.descripcion {
+    margin-top: 20px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
 }
 
 footer {
