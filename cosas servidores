@@ -1,0 +1,85 @@
+//intalacion de tailwind CSS
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+//configuracion de archivo tailwind.config.js
+
+module.exports = {
+    content: [
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
+        './node_modules/flowbite/**/*.js'
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [
+        require('flowbite/plugin')
+    ],
+};
+
+
+npm install flowbite
+
+composer require laravel/breeze --dev
+php artisan breeze:install
+php artisan migrate
+
+npm install
+npm run dev
+
+git init
+git add .
+git commit -m "Plantilla base inicial"
+
+git clone <URL-del-repositorio> nombre-proyecto
+
+composer install
+npm install
+php artisan key:generate
+php artisan migrate
+
+//ejemplo de create.blade.php para un formulario
+
+<x-app-layout>
+    <div class="max-w-4xl mx-auto mt-8">
+        <div class="bg-white p-6 rounded shadow">
+            <h1 class="text-2xl font-bold mb-4">Create New Album</h1>
+            
+            <!-- Mensajes de error -->
+            @if ($errors->any())
+                <div class="mb-4">
+                    <ul class="list-disc list-inside text-red-600">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <!-- Formulario -->
+            <form action="{{ route('albums.store') }}" method="POST">
+                @csrf
+                <div class="mb-4">
+                    <label for="title" class="block text-sm font-medium text-gray-700">Album Title</label>
+                    <input 
+                        type="text" 
+                        name="title" 
+                        id="title" 
+                        value="{{ old('title') }}" 
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                        required
+                    >
+                </div>
+
+                <div class="mt-6">
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                        Save Album
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</x-app-layout>

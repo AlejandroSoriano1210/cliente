@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Laravel Base')</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between">
+                <a href="/" class="text-lg font-bold">Base Template</a>
+                <div>
+                    @auth
+                        <a href="{{ route('logout') }}" class="text-blue-500">Logout</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-blue-500">Login</a>
+                    @endauth
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-6">
+        @yield('content')
+    </main>
+    <footer class="text-center py-4 text-gray-600">
+        &copy; {{ date('Y') }} Base Template. All rights reserved.
+    </footer>
+</body>
+</html>
