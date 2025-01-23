@@ -111,8 +111,14 @@ nav {
 }
 
 .conejos-hamsters {
-    display: flex;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 80px;
+    max-width: 819px;
 }
 
 .tabs-menu {
@@ -124,35 +130,47 @@ nav {
     list-style: none;
 }
 
+.tabs-menu img {
+    width: 120px;
+    align-self: center;
+}
+
 .tabs-menu li {
     display: block;
-    width: fit-content;
-    margin: 15px;
+    margin: 30px;
+    width: 450px;
+    height: 179px;
+}
+
+.tabs-menu button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .tabs-menu li a {
     display: block;
     padding: 10px 20px;
-    width: fit-content;
     font-size: 18px;
-    background-color: #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .tabs-menu li a:hover {
-    background-color: #bbb;
+    background-color: #ffffff;
 }
 
 .tab-content {
     display: none;
-    text-align: center;
     background-color: #fff;
-    padding: 40px;
+    padding: 20px;
     position: absolute;
-    top: 80px;
     left: 50%;
+    top: 80px;
     transform: translateX(-50%);
     width: 70%;
     border-radius: 10px;
@@ -170,6 +188,10 @@ nav {
 
 .descripcion {
     margin-top: 20px;
+}
+
+.descripcion p {
+    margin-top: 10px;
 }
 
 .cerrar {
