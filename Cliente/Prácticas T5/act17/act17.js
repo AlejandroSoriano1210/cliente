@@ -42,6 +42,7 @@ boton.addEventListener('click', function () {
     } else {
         error.style.display = 'none';
         preview.textContent = "";
+        preview.style.backgroundColor = "";
         resumen.innerHTML = `
                 <strong>Resumen de tus respuestas:</strong><br>
                 Nombre: ${name}<br>
