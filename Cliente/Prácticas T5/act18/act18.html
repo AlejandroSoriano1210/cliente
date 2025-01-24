@@ -11,32 +11,38 @@
     <form id="formulario">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
+        <p id="errorNombre"></p>
 
-        <br><br><label for="apellidos">Apellidos:</label>
+        <br><label for="apellidos">Apellidos:</label>
         <input type="text" name="apellidos" id="apellidos" placeholder="Escriba su apellidos">
+        <p id="errorApellidos"></p>
 
-        <br><br><label for="contrasena">Contraseña:</label>
+        <br><label for="contrasena">Contraseña:</label>
         <input type="text" name="contrasena" id="contrasena" placeholder="Escriba su contraseña">
+        <p id="errorContrasena"></p>
 
-        <br><br><label for="nacimiento">Fecha de nacimiento:</label>
+        <br><label for="nacimiento">Fecha de nacimiento:</label>
         <input type="date" name="nacimiento" id="nacimiento">
+        <p id="errorNacimiento"></p>
 
-        <br><br><label for="intereses">Seleccione al menos uno de los siguientes intereses: </label>
+        <br><label for="intereses">Seleccione al menos uno de los siguientes intereses: </label>
         <br><input type="checkbox" name="intereses" id="intereses1"> Deportes
         <br><input type="checkbox" name="intereses" id="intereses2"> Videojuegos
         <br><input type="checkbox" name="intereses" id="intereses3"> Moda
         <br><input type="checkbox" name="intereses" id="intereses3"> Coches
         <br><input type="checkbox" name="intereses" id="intereses3"> Literatura
+        <p id="errorInteres"></p>
 
-        <br><br>
+        <br>
         Elige un género:
         <br><input type="radio" name="genero" value="Hombre">Hombre
         <br><input type="radio" name="genero" value="Mujer">Mujer
         <br><input type="radio" name="genero" value="Binariont">No binario
         <br><input type="radio" name="genero" value="Maradona">Maradona
         <br><input type="radio" name="genero" value="No">Prefiero no decir
+        <p id="errorGenero"></p>
 
-        <br><br><button type="button" id="boton">Enviar</button>
+        <br><button type="button" id="boton">Enviar</button>
         <p id="error" hidden>Por favor, completa todos los campos.</p>
     </form>
     <script src="act18.js"></script>
