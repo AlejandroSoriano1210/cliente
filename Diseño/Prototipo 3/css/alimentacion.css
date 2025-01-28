@@ -10,7 +10,8 @@ a {
 
 header {
     display: flex;
-    gap: 28%;
+    margin-left: 1%;
+    gap: 26%;
     flex-shrink: 0;
 }
 
@@ -111,50 +112,92 @@ nav {
 }
 
 .alimentacion {
-    width: 90%;
-    max-width: 120em;
-    padding: 2em;
-    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+    overflow: hidden;
 }
 
-.alimentacion .articulos {
-    width: 200%;
+.carrusel {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    margin-top: 200px;
+    transition: transform 0.5s ease;
+}
+
+.articulos {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    min-width: 100%;
+    text-align: center;
+}
+
+.item p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 30px 100px 0 100px;
+    line-height: 1.5;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.item img {
+    height: 50%;
+    width: auto;
+}
+
+.controles {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
-
-
-    transition: all .5s ease;
-    transform: translateX(0%);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
 }
 
-.alimentacion img {
-    width: calc(100% / 2 - 2em);
-    min-height: 10vh;
+button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    margin: 0 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
-.alimentacion .puntos {
-    width: 100%;   
-    padding: .4em;
-    margin: 1em 0 0;
+.puntos {
+    list-style: none;
     display: flex;
-    flex-flow: row nowrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
-.alimentacion .punto {
-    width: 2em;
-    background-color: blue;
-    height: 2em;
-    margin: 1em 1em 0;
+.punto {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.alimentacion .punto.activo {
-    background-color: red;
+.punto.activo {
+    background: #3cff00;
 }
+
 
 footer {
     display: flex;

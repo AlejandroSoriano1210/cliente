@@ -10,7 +10,8 @@ a {
 
 header {
     display: flex;
-    gap: 28%;
+    margin-left: 1%;
+    gap: 26%;
     flex-shrink: 0;
 }
 

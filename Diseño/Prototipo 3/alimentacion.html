@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&display=swap"
         rel="stylesheet">
-
 </head>
 <body>
     <div class="alimentacion-html">
@@ -36,41 +35,64 @@
             </nav>
         </header>
 
-        <!-- productos en carrusel -->
-        <!-- hacer que un producto este en grande en el centro con la descripción en el lateral derecho, flechas en los laterales. -->
-         <!-- intentar hacer los botones del carrusel con input type checkboxes -->
         <section class="alimentacion">
-            <div class="articulos">
-                <img src="img/pure.png" alt="Imagen 1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, in autem rem excepturi
-                    impedit distinctio facilis voluptatum optio quidem inventore numquam dicta officia reiciendis rerum
-                    voluptate! Facere commodi illo beatae?</p>
-                <p>30.99$</p>
-                <img src="img/pro-plan.png" alt="Imagen 2">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, accusantium quos,
-                    voluptatum magnam eos deleniti fugit alias deserunt veniam distinctio ab ducimus saepe ut totam ex.
-                    Velit esse veritatis sint.</p>
-                <p>26.99$</p>
-                <img src="img/royal-canin.png" alt="Imagen 3">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non esse natus ipsa nam doloribus!
-                    A corporis, deleniti cumque ad praesentium reprehenderit corrupti unde iure nisi ex quo inventore
-                    voluptate fuga.</p>
-                <p>23.99$</p>
+            <div class="carrusel">
+                <div class="articulos">
+                    <div class="item">
+                        <img src="img/pure.png" alt="Imagen 1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, in autem rem excepturi
+                            impedit distinctio facilis voluptatum optio quidem inventore numquam dicta officia
+                            reiciendis rerum
+                            voluptate! Facere commodi illo beatae? <br><br>30.99$
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="img/pro-plan.png" alt="Imagen 2">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, accusantium quos,
+                            voluptatum magnam eos deleniti fugit alias deserunt veniam distinctio ab ducimus saepe ut
+                            totam ex.
+                            Velit esse veritatis sint. <br><br> 26.99$
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="img/royal-canin.png" alt="Imagen 3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non esse natus ipsa nam doloribus!
+                            A corporis, deleniti cumque ad praesentium reprehenderit corrupti unde iure nisi ex quo
+                            inventore
+                            voluptate fuga. <br><br> 23.99$
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="img/royal-canin.png" alt="Imagen 3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non esse natus ipsa nam doloribus!
+                            A corporis, deleniti cumque ad praesentium reprehenderit corrupti unde iure nisi ex quo
+                            inventore
+                            voluptate fuga. <br><br> 23.99$
+                        </p>
+                    </div>
+                </div>
             </div>
 
+            <div class="controles">
+                <button class="anterior">◀</button>
+                <button class="siguiente">▶</button>
+            </div>
             <ul class="puntos">
                 <li class="punto activo"></li>
                 <li class="punto"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
             </ul>
-
         </section>
+
 
         <footer class="pie-pagina">
             <img src="img/by.svg" alt="">
-            <p class="derechos">© 2024 Huellas Felices. <br> Todos los derechos reservados.</p>
+            <p class="derechos">© 2024 Huellas Felices. <br><br> Todos los derechos reservados.</p>
             <img src="img/redes.png" alt="">
         </footer>
 
     </div>
+    <script src="js/alimentacion.js"></script>
 </body>
 </html>

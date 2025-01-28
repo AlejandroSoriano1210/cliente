@@ -10,7 +10,8 @@ a {
 
 header {
     display: flex;
-    gap: 28%;
+    margin-left: 1%;
+    gap: 26%;
     flex-shrink: 0;
 }
 
@@ -117,6 +118,7 @@ nav {
     align-self: center;
     position: relative;
     padding-top: 80px;
+    margin-left: 10%;
     margin-bottom: 80px;
     max-width: 819px;
 }
@@ -199,7 +201,7 @@ nav {
     top: 10px;
     right: 10px;
     font-size: 30px;
-    color: #aaa;
+    color: #949494;
     cursor: pointer;
 }
 
