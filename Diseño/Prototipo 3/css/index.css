@@ -116,14 +116,14 @@ nav {
 
 .aves img,
 .mamiferos img {
-    width: 360px;
-    height: 563px;
+    max-width: 90%;
+    max-height: 90%;
 }
 
-.img-portada .inter-texto-portada {
+.inter-texto-portada {
     position: absolute;
-    top: 31%;
-    left: 22%;
+    top: 100%;
+    left: 45%;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 30px;
     text-wrap: wrap;
@@ -132,14 +132,15 @@ nav {
 .inter-texto-portada-strong {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-size: 80px;
+    font-size: 30px;
     font-weight: 900;
     font-style: normal;
 }
 
 .inter-texto-portada {
     color: white;
-    font-size: 64px;
+    font-size: 24px;
+    padding: 20px;
     text-align: left;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -166,8 +167,8 @@ nav {
 
 .aves,
 .mamiferos {
-    width: 371px;
-    height: 651px;
+    max-width: 90%;
+    max-height: 90%;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }

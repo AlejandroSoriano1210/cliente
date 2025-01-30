@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         rel="stylesheet">
 
 </head>
+
 <body>
     <div class="menu-principal">
 
@@ -36,12 +38,25 @@
             </nav>
         </header>
 
-        <section class="portada">
-            <figure class="img-portada"><img src="img/imagen-portada.png" alt="">
-                <figcaption class="inter-texto-portada">Un hogar,<br> una vida,<br> una segunda <br> <strong
-                        class="inter-texto-portada-strong">OPORTUNIDAD</strong></figcaption>
-            </figure>
-        </section>
+        <div class="portada">
+            <div class="img-portada">
+                <img 
+                src="img/imagen-portada-1440.png" 
+                class="img-portada"
+                srcset="img/imagen-portada-760.png 760w,
+                        img/imagen-portada-1024.png 1024w,
+                        img/imagen-portada-1440.png 1440w"
+                sizes="(max-width: 600px) 100vw,
+                       (max-width: 1200px) 50vw,
+                       33vw">
+                <p class="inter-texto-portada">
+                    Un hogar,
+                    <br> una vida,
+                    <br> una segunda 
+                    <br> <strong class="inter-texto-portada-strong">OPORTUNIDAD</strong>
+                </p>
+            </div>
+        </div>
 
         <section class="animales">
             <a href="aves.html">
@@ -67,4 +82,5 @@
 
     </div>
 </body>
+
 </html>
