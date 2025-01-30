@@ -139,8 +139,7 @@ nav {
     position: relative;
     gap: 200px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .contacto-info {
@@ -220,7 +219,7 @@ nav {
 .acordeon {
     max-width: 600px;
     margin: 40px auto;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;

@@ -127,6 +127,7 @@ nav {
 
 .item {
     max-width: 70%;
+    margin-top: 2%;
     text-align: center;
 }
 
@@ -167,8 +168,7 @@ nav {
 }
 
 .grande {
-    max-width: 80%;
-    max-height: 80%;
+    width: 25%;
     cursor: zoom-in;
     transition: transform 0.3s ease;
 }
