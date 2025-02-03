@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+
+    <button id="crearDiv">Añadir</button>
+
+    <script>
+        var crearDiv = document.getElementById("crearDiv");
+
+        crearDiv.addEventListener("click",function() {
+            var nodo = document.createElement("div");
+            var contenido = document.createTextNode("Contenido");
+            var texto = prompt("Escribe un texto:");
+
+            nodo.appendChild(contenido);
+
+            document.body.appendChild(nodo);
+
+            contenido.textContent = texto;
+
+            var eliminarDiv = document.createElement("button");
+            eliminarDiv.innerHTML = "Eliminar";
+            
+            eliminarDiv.addEventListener("click", function() {
+                document.body.removeChild(nodo);
+                document.body.removeChild(eliminarDiv);
+                document.body.removeChild(document.getElementById("br"));
+            });
+
+            document.body.appendChild(eliminarDiv);
+
+            var br = document.createElement("br");
+            document.body.appendChild(br);
+        })
+    </script>
+
+</body>
+</html>
