@@ -10,7 +10,7 @@ a {
 header {
     display: flex;
     margin-left: 1%;
-    gap: 26%;
+    justify-content: space-around;
     flex-shrink: 0;
 }
 

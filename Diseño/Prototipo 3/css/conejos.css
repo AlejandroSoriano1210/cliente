@@ -11,7 +11,7 @@ a {
 header {
     display: flex;
     margin-left: 1%;
-    gap: 26%;
+    justify-content: space-around;
     flex-shrink: 0;
 }
 
@@ -66,8 +66,8 @@ nav {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 50px;
-    right: 5px;
+    top: 10%;
+    right: 1%;
     background-color: #dff3d5;
     font-size: 40px;
     font-family: "Inter", sans-serif;
@@ -163,13 +163,14 @@ nav {
 }
 
 .tabs-menu li a:hover {
-    background-color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .tab-content {
     display: none;
     background-color: #fff;
-    padding: 20px;
+    padding: 5%;
     margin-left: 20%;
     position: absolute;
     top: 30vh;
@@ -177,6 +178,10 @@ nav {
     width: 50vh;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .tab-content img {
