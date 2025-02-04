@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+</head>
+<body>
+    <h1>Tabla de Vehículos</h1>
+    <button onclick="generarTabla()">Generar tabla</button>
+
+    <script>
+        function vehiculo(marca, modelo, color, ano) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
+            this.ano = ano;
+        }
+
+        function generarTabla() {
+            var div = document.createElement("div");
+
+            var vehiculos = [
+                new vehiculo("BMW", "M8", "Blanco", 2023),
+                new vehiculo("Toyota", "Corolla", "Negro", 2022),
+                new vehiculo("Vapid", "Dominator", "Rojo", 2020),
+                new vehiculo("Pfister", "Comet", "Naranja", 2018),
+                new vehiculo("Pegassi", "Zentorno", "Negro", 2024)
+            ];
+
+            var tabla = "<table><tr><th>Marca</th><th>Modelo</th><th>Color</th><th>Año</th></tr>";
+
+            vehiculos.forEach(vehiculo => {
+                tabla +=    `<tr>
+                                <td>${vehiculo.marca}</td>
+                                <td>${vehiculo.modelo}</td>
+                                <td>${vehiculo.color}</td>
+                                <td>${vehiculo.ano}</td>
+                            </tr>`;
+            });
+
+            tabla += "</table>";
+
+            document.body.appendChild(div);
+
+            div.innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

@@ -1,34 +1,106 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrusel con Flechas (solo HTML y CSS)</title>
-  <link rel="stylesheet" href="eestilosLAB.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-  <div class="carrusel">
-    <!-- Controles de radio invisibles para cambiar de imagen -->
-    <input type="radio" name="slide" id="slide1" checked>
-    <input type="radio" name="slide" id="slide2">
-    <input type="radio" name="slide" id="slide3">
-    
-    <!-- Flechas -->
-    <label for="slide3" class="prev">&#10094;</label>
-    <label for="slide2" class="next">&#10095;</label>
 
-    <!-- Contenedor de las imágenes -->
-    <div class="carrusel-contenido">
-      <div class="carrusel-item">
-        <img src="imagen1.jpg" alt="Imagen 1">
-      </div>
-      <div class="carrusel-item">
-        <img src="imagen2.jpg" alt="Imagen 2">
-      </div>
-      <div class="carrusel-item">
-        <img src="imagen3.jpg" alt="Imagen 3">
-      </div>
-    </div>
-  </div>
+    <h1>Formulario para Crear un Vehículo</h1>
+
+    <!-- Formulario para ingresar los datos del vehículo -->
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" placeholder="Marca del vehículo"><br><br>
+    
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" placeholder="Modelo del vehículo"><br><br>
+    
+    <label for="color">Color:</label>
+    <input type="text" id="color" placeholder="Color del vehículo"><br><br>
+    
+    <label for="anio">Año de fabricación:</label>
+    <input type="number" id="anio" placeholder="Año de fabricación"><br><br>
+    
+    <!-- Botón para crear el objeto y mostrarlo -->
+    <button onclick="crearVehiculo()">Crear Vehículo</button>
+
+    <h2>Tabla de Vehículos</h2>
+    <table id="tablaVehiculos">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Año de fabricación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se agregarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // Función que se ejecuta al pulsar el botón
+        function crearVehiculo() {
+            // Obtener los valores de los inputs
+            var marca = document.getElementById("marca").value;
+            var modelo = document.getElementById("modelo").value;
+            var color = document.getElementById("color").value;
+            var anio = document.getElementById("anio").value;
+
+            // Validar si los campos están completos
+            if (marca === "" || modelo === "" || color === "" || anio === "") {
+                alert("Por favor, complete todos los campos.");
+                return;
+            }
+
+            // Crear un objeto vehiculo
+            var vehiculo = {
+                marca: marca,
+                modelo: modelo,
+                color: color,
+                anio: anio
+            };
+
+            // Mostrar el vehículo en la tabla
+            mostrarVehiculoEnTabla(vehiculo);
+        }
+
+        // Función para mostrar el vehículo en la tabla
+        function mostrarVehiculoEnTabla(vehiculo) {
+            var tabla = document.getElementById("tablaVehiculos").getElementsByTagName('tbody')[0];
+
+            // Crear una nueva fila de tabla
+            var nuevaFila = tabla.insertRow();
+
+            // Insertar celdas con los datos del vehículo
+            var celdaMarca = nuevaFila.insertCell(0);
+            celdaMarca.textContent = vehiculo.marca;
+
+            var celdaModelo = nuevaFila.insertCell(1);
+            celdaModelo.textContent = vehiculo.modelo;
+
+            var celdaColor = nuevaFila.insertCell(2);
+            celdaColor.textContent = vehiculo.color;
+
+            var celdaAnio = nuevaFila.insertCell(3);
+            celdaAnio.textContent = vehiculo.anio;
+        }
+    </script>
+
 </body>
 </html>
