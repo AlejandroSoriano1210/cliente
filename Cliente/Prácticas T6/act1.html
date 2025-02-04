@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+
+<body>
+    <h1>Notas de Alumnos</h1>
+    
+    <div>
+        <label for="nombre">Nombre del Alumno:</label>
+        <input type="text" id="nombre">
+    </div>
+    
+    <div>
+        <label for="cliente">Cliente:</label>
+        <input type="number" id="cliente" min="0" max="10">
+    </div>
+    
+    <div>
+        <label for="servidor">Servidor:</label>
+        <input type="number" id="servidor" min="0" max="10">
+    </div>
+    
+    <div>
+        <label for="diseno">Diseño:</label>
+        <input type="number" id="diseno" min="0" max="10">
+    </div>
+    <button onclick="agregarAlumno()">Agregar Alumno</button>
+    <br><br>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Cliente</th>
+                <th>Servidor</th>
+                <th>Diseño</th>
+            </tr>
+        </thead>
+        <tbody id="tablaNotas">
+            <!-- Aquí se insertan las filas -->
+        </tbody>
+    </table>
+
+    <script>
+        function agregarAlumno() {
+            var nombre = document.getElementById("nombre").value;
+            var cliente = parseFloat(document.getElementById("cliente").value);
+            var servidor = parseFloat(document.getElementById("servidor").value);
+            var diseno = parseFloat(document.getElementById("diseno").value);
+
+            if (!nombre || isNaN(cliente) || isNaN(servidor) || isNaN(diseno) || cliente < 0 || cliente > 10 || servidor < 0 || servidor > 10 || diseno < 0 || diseno > 10) {
+                alert("Por favor, introduzca datos válidos.");
+                return;
+            }
+
+            var tabla = document.getElementById("tablaNotas");
+            var fila = document.createElement("tr");
+            fila.innerHTML = `<td>${nombre}</td><td>${cliente}</td><td>${servidor}</td><td>${diseno}</td>`;
+            tabla.appendChild(fila);
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("cliente").value = "";
+            document.getElementById("servidor").value = "";
+            document.getElementById("diseno").value = "";
+        }
+    </script>
+</body>
+
+</html>
