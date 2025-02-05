@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desactivar Inputs</title>
+</head>
+<body>
+
+    <h2>Activar / Desactivar Inputs</h2>
+
+    <input type="text" id="input1" placeholder="Aqui">
+    <input type="text" id="input2" placeholder="se escribe">
+    <input type="text" id="input3" placeholder="algo">
+
+    <br><br>
+
+    <button id="boton">Alternar Inputs</button>
+
+    <script>
+        var inputs = document.querySelectorAll("input");
+        var boton = document.getElementById("boton");
+
+        var disabled = false;
+
+        boton.addEventListener("click", function() {
+            disabled = !disabled;
+            inputs.forEach(input => input.disabled = disabled);
+        });
+    </script>
+
+</body>
+</html>
