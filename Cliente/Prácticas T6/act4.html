@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <h1>Notas de Alumnos</h1>
+    
+    <div>
+        <label for="nombre">Nombre del Alumno:</label>
+        <input type="text" id="nombre">
+    </div>
+    
+    <div>
+        <label for="cliente">Cliente:</label>
+        <input type="number" id="cliente" min="0" max="10">
+    </div>
+    
+    <div>
+        <label for="servidor">Servidor:</label>
+        <input type="number" id="servidor" min="0" max="10">
+    </div>
+    
+    <div>
+        <label for="diseno">Diseño:</label>
+        <input type="number" id="diseno" min="0" max="10">
+    </div>
+    <button onclick="agregarAlumno()">Agregar Alumno</button>
+    <br><br>
+    <span id="span"></span>
+
+    <script>
+        var alumnos = [];
+
+        function agregarAlumno() {
+            var nombre = document.getElementById("nombre").value;
+            var cliente = parseFloat(document.getElementById("cliente").value);
+            var servidor = parseFloat(document.getElementById("servidor").value);
+            var diseno = parseFloat(document.getElementById("diseno").value);
+
+            if (!nombre || isNaN(cliente) || isNaN(servidor) || isNaN(diseno) || 
+            cliente < 0 || cliente > 10 || servidor < 0 || servidor > 10 || diseno < 0 || diseno > 10) {
+                alert("Por favor, introduzca datos válidos.");
+                return;
+            }
+
+            alumnos.push({ nombre, cliente, servidor, diseno});
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("cliente").value = "";
+            document.getElementById("servidor").value = "";
+            document.getElementById("diseno").value = "";
+
+            if(alumnos.length === 5) {
+                mostrarTabla();
+            }
+
+            var span = document.getElementById("span");
+            for (let k = alumnos.length; k < 6;  k++) {
+                var i = alumnos.length;
+                if (i < 2) {
+                    span.innerHTML = i + " alumno introducido";
+                } else {
+                    span.innerHTML = i + " alumnos introducidos"
+                }
+            }
+
+            document.body.appendChild(span);
+        }
+
+        function mostrarTabla() {
+            var tabla = document.createElement("table");
+            tabla.border = "1";
+
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+            var fila = document.createElement("tr");
+
+            var cabecera1 = document.createElement("th");
+            cabecera1.textContent = "Nombre";
+            
+            var cabecera2 = document.createElement("th");
+            cabecera2.textContent = "Cliente";
+
+            var cabecera3 = document.createElement("th");
+            cabecera3.textContent = "Servidor";
+
+            var cabecera4 = document.createElement("th");
+            cabecera4.textContent = "Diseño";
+
+            fila.appendChild(cabecera1);
+            fila.appendChild(cabecera2);
+            fila.appendChild(cabecera3);
+            fila.appendChild(cabecera4);
+
+            thead.appendChild(fila);
+            tabla.appendChild(thead);
+
+            alumnos.forEach(function(alumno) {
+                var fila = document.createElement("tr");
+
+                var celda1 = document.createElement("td");
+                celda1.textContent = alumno.nombre;
+
+                var celda2 = document.createElement("td");
+                celda2.textContent = alumno.cliente;
+
+                var celda3 = document.createElement("td");
+                celda3.textContent = alumno.servidor;
+
+                var celda4 = document.createElement("td");
+                celda4.textContent = alumno.diseno;
+
+                fila.appendChild(celda1);
+                fila.appendChild(celda2);
+                fila.appendChild(celda3);
+                fila.appendChild(celda4);
+
+                tbody.appendChild(fila);
+            });
+
+            tabla.appendChild(tbody);
+            document.body.appendChild(tabla);
+        }
+    </script>
+</body>
+</html>

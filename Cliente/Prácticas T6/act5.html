@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 5</title>
     <style>
-        p {
-            display: block;
-        }
-
         .oculto {
             display: none;
         }
@@ -19,44 +15,25 @@
     <h1>Párrafos de texto</h1>
     <p id="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab est amet libero voluptate voluptas
         itaque, cum fugiat, animi numquam, nulla hic saepe sapiente. Quidem dolorem aspernatur magnam cum quod.</p>
-    <button onclick="ocultarLorem()">Ocultar</button>
+    <button onclick="ocultar('Lorem')">Ocultar</button>
     <br>
     <p id="DBZ">El Supersaiyano (超スーパーサイヤ人じん Sūpā Saiya-jin¿?) es un estado que solo pueden alcanzar los saiyanos con
         gran potencial latente o arduo entrenamiento al activar sus células S, así como los mestizos de esta misma raza
         guerrera o gente con la sangre de la misma lo pueden obtener.</p>
-    <button onclick="ocultarDBZ()">Ocultar</button>
+    <button onclick="ocultar('DBZ')">Ocultar</button>
     <br>
     <p id="celebrity">Samuel de Luque Batuecas, conocido como Vegetta777, es un youtuber y streamer español que sube
         vídeos y hace emisiones en directo de gameplays.Su canal de YouTube cuenta con más de 34 millones de
         suscriptores (lo que lo convierte en el tercer canal más grande de España) y 15 000 000 000 de vistas.</p>
-    <button onclick="ocultar777()">Ocultar</button>
+    <button onclick="ocultar('celebrity')">Ocultar</button>
 
     <script>
-        var lorem = document.getElementById("Lorem");
-        var dbz = document.getElementById("DBZ");
-        var celebrity = document.getElementById("celebrity");
-
-        function ocultarLorem() {
-            if (lorem.style.display === "none") {
-                lorem.style.display = "block";
+        function ocultar(id) {
+            var elemento = document.getElementById(id);
+            if (elemento.classList.contains("oculto")) {
+                elemento.classList.remove("oculto");
             } else {
-                lorem.style.display = "none";
-            }
-        }
-        
-        function ocultarDBZ() {
-            if (dbz.style.display === "none") {
-                dbz.style.display = "block";
-            } else {
-                dbz.style.display = "none";
-            }
-        }
-
-        function ocultar777() {
-            if (celebrity.style.display === "none") {
-                celebrity.style.display = "block";
-            } else {
-                celebrity.style.display = "none";
+                elemento.classList.add("oculto");
             }
         }
     </script>
