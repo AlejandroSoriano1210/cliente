@@ -9,7 +9,8 @@ a {
 
 header {
     display: flex;
-    gap: 30%;
+    margin-left: 1%;
+    justify-content: space-around;
     flex-shrink: 0;
 }
 
@@ -40,6 +41,7 @@ nav {
 
 .hamburgesa .linea {
     width: 100%;
+    font-size: 1px;
     height: 4px;
     background-color: black;
     border-radius: 2px;
@@ -140,7 +142,7 @@ nav {
 
 .inter-texto-portada {
     color: white;
-    font-size: 64px;
+    font-size: 40px;
     text-align: left;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
