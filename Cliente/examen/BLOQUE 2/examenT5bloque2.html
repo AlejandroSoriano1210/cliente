@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Bloque 2</title>
+</head>
+<body>
+
+    <h1>formulario</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
+        <p id="errorNombre"></p>
+
+        <br><label for="entrada">Fecha de entrada:</label>
+        <input type="date" name="entrada" id="entrada">
+        <p id="errorFecha"></p>
+
+        <br><label for="salida">Fecha de salida:</label>
+        <input type="date" name="salida" id="salida">
+        <p id="errorFechaSalida"></p>
+
+        <br><label for="huespedes">Número de huéspedes:</label>
+        <input type="number" name="huespedes" id="huespedes" min="1" max="4">
+        <p id="errorHuespedes"></p>
+
+        <br><label for="telefono">Número de teléfono móvil:</label>
+        <input type="text" name="telefono" id="telefono" placeholder="Escriba su teléfono móvil">
+        <p id="errorTelefono"></p>
+
+        <br><button id="boton">Reservar</button>
+        <p id="error" hidden>Por favor, completa todos los campos.</p>
+    </form>
+    <script src="examenT5bloque2.js"></script>
+</body>
+</html>
