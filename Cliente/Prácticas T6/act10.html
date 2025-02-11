@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 10</title>
+</head>
+<body>
+    <h1>Formulario de producto</h1>
+    <form>
+        <label for="nombre">Nombre del producto:</label>
+        <input type="text" id="nombre">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" placeholder="presio">
+        <label for="imagen">Imagen:</label>
+        <input type="text" id="imagen" placeholder="URL de la imagen">
+        <button type="button" onclick="agregarProducto()">Añadir producto</button>
+    </form>
+
+    <script>
+        function agregarProducto() {
+            
+            var tarjeta = document.createElement('div');
+            
+            var nombre = document.getElementById('nombre').value;
+            var precio = document.getElementById('precio').value;
+            var imagen = document.getElementById('imagen').value;
+            
+            var nombreProducto = document.createElement('p');
+            nombreProducto.textContent = nombre;
+            
+            var precioProducto = document.createElement('p');
+            precioProducto.textContent = 'Precio: ' + precio + '€';
+
+            var img = document.createElement('img');
+            img.setAttribute('src', imagen);
+            img.width = 300;
+
+            tarjeta.appendChild(nombreProducto);
+            tarjeta.appendChild(precioProducto);
+            tarjeta.appendChild(img);
+
+            document.body.appendChild(tarjeta);
+        }
+    </script>
+</body>
+</html>

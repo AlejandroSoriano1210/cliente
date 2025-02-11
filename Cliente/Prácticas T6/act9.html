@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad">
+        <button type="button" id="agregarUsuario">Agregar usuario</button>
+    </form>
+
+    <h2>Usuarios registrados</h2>
+    <table id="tablaUsuarios">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertan las filas -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('agregarUsuario').addEventListener('click', function() {
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+            
+            if (nombre && edad) {
+                var nuevaFila = document.createElement('tr');
+
+                var celdaNombre = document.createElement('td');
+                celdaNombre.textContent = nombre;
+
+                var celdaEdad = document.createElement('td');
+                celdaEdad.textContent = edad;
+
+                var celdaAcciones = document.createElement('td');
+                var botonEliminar = document.createElement('button');
+                botonEliminar.textContent = 'Eliminar';
+                
+                botonEliminar.addEventListener('click', function() {
+                    nuevaFila.remove();
+                });
+
+                celdaAcciones.appendChild(botonEliminar);
+                nuevaFila.appendChild(celdaNombre);
+                nuevaFila.appendChild(celdaEdad);
+                nuevaFila.appendChild(celdaAcciones);
+
+                document.querySelector('#tablaUsuarios tbody').appendChild(nuevaFila);
+
+                document.getElementById('nombre').value = '';
+                document.getElementById('edad').value = '';
+            } else {
+                alert('Por favor, ingrese tanto el nombre como la edad.');
+            }
+        });
+    </script>
+</body>
+</html>
