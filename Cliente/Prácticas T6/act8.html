@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8</title>
+</head>
+<body>
+    <h1>Imagen Cambiante</h1>
+    <img src="img/Thomas_C._Lea_III_-_That_Two-Thousand_Yard_Stare_-_Original.jpg" width="300">
+
+    <script>
+
+        var img = document.querySelector("img");
+
+            img.addEventListener("mouseover", function() {
+                img.setAttribute("src", "img/a30909fac037a9da15b80cfbc601cda9.jpg");
+            });
+        
+            img.addEventListener("mouseout", function() {
+                img.setAttribute("src", "img/Thomas_C._Lea_III_-_That_Two-Thousand_Yard_Stare_-_Original.jpg");
+            });
+    </script>
+</body>
+</html>

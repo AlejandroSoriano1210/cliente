@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 7</title>
     <style>
-        .bloque {
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px;
+        #dom {
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
-    <script>
-        var div = document.createElement('div');
-        var p = document.createElement('p');
-        var texto = document.createTextNode('Texto de prueba');
-        var strong = document.createElement('strong');
-        var textoStrong = document.createTextNode('Negrita');
-        var img = document.createElement('img');
 
-        div.className = 'bloque';
-        p.className = 'bloque';
-        texto.className = 'bloque';
-        strong.className = 'bloque';
-        textoStrong.className = 'bloque';
-        img.className = 'bloque';
-        
-        p.appendChild(strong);
-        p.appendChild(texto);
-        strong.appendChild(textoStrong);
-        div.appendChild(img);
-        div.appendChild(p);
-        document.body.appendChild(div);
+    <h1>Representación del DOM de la Página</h1>
+    <button onclick="mostrarDOM()">Mostrar DOM</button>
+
+    <div id="dom"></div>
+
+    <script>
+        function mostrarDOM() {
+            var domHTML = document.documentElement.outerHTML;
+
+            document.getElementById("dom").textContent = domHTML;
+        }
     </script>
+
 </body>
 </html>
