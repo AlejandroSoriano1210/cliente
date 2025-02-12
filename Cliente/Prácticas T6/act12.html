@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+</head>
+<body>
+    <h1>Tabla dinámica</h1>
+    <button id="anadirFila">Añadir Fila</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+        boton = document.getElementById("anadirFila");
+
+        boton.addEventListener("click", function() {
+            var tbody = document.getElementById("tbody");
+            var fila = document.createElement("tr");
+
+            for (var i = 0; i < 3; i++) {
+                var celda = document.createElement("td");
+                celda.textContent = "Click para editar";
+                celda.addEventListener("click", makeEditable);
+                fila.appendChild(celda);
+            }
+
+            var eliminarCelda = document.createElement("td");
+            var botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "Eliminar";
+            botonEliminar.addEventListener("click", function() {
+                tbody.removeChild(fila);
+            });
+            eliminarCelda.appendChild(botonEliminar);
+            fila.appendChild(eliminarCelda);
+
+            tbody.appendChild(fila);
+        });
+
+        function makeEditable(event) {
+            var celda = event.target;
+            var texto = celda.textContent;
+            var input = document.createElement("input");
+            input.type = "text";
+            input.value = texto;
+            
+            input.addEventListener("blur", function() {
+                celda.textContent = input.value;
+            });
+            
+            input.addEventListener("keyup", function(event) {
+                if (event.key === "Enter") {
+                    celda.textContent = input.value;
+                } else if (event.key === "Escape") {
+                    celda.textContent = "Click para editar";
+                }
+            });
+            
+            celda.textContent = "";
+            celda.appendChild(input);
+            input.focus();
+        }
+    </script>
+</body>
+</html>
