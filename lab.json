@@ -1,0 +1,39 @@
+{
+    "superheroes": [
+        {
+            "name": "Superman",
+            "alterEgo": "Clark Kent",
+            "powers": ["super strength", "flight", "x-ray vision", "heat vision", "invulnerability"]
+        },
+        {
+            "name": "Batman",
+            "alterEgo": "Bruce Wayne",
+            "powers": ["intelligence", "martial arts", "gadgets", "stealth"]
+        },
+        {
+            "name": "Wonder Woman",
+            "alterEgo": "Diana Prince",
+            "powers": ["super strength", "flight", "combat skills", "lasso of truth", "immortality"]
+        },
+        {
+            "name": "The Flash",
+            "alterEgo": "Barry Allen",
+            "powers": ["super speed", "time travel", "phasing", "super reflexes"]
+        },
+        {
+            "name": "Aquaman",
+            "alterEgo": "Arthur Curry",
+            "powers": ["super strength", "underwater breathing", "communication with sea life", "enhanced senses"]
+        },
+        {
+            "name": "Green Lantern",
+            "alterEgo": "Hal Jordan",
+            "powers": ["power ring", "flight", "energy constructs", "force fields"]
+        },
+        {
+            "name": "Cyborg",
+            "alterEgo": "Victor Stone",
+            "powers": ["super strength", "advanced technology", "cybernetic enhancements", "technopathy"]
+        }
+    ]
+}
