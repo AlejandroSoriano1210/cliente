@@ -69,7 +69,7 @@ nav {
     top: 50px;
     right: 5px;
     background-color: #dff3d5;
-    font-size: 40px;
+    font-size: 2.5em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -132,21 +132,21 @@ nav {
     text-wrap: wrap;
 }
 
-.inter-texto-portada-strong {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 80px;
-    font-weight: 900;
-    font-style: normal;
-}
-
 .inter-texto-portada {
     color: white;
-    font-size: 40px;
+    font-size: 2.5em;
     text-align: left;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
+    font-style: normal;
+}
+
+.inter-texto-portada-strong {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.3em;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -178,7 +178,7 @@ nav {
 .aves figcaption,
 .mamiferos figcaption {
     bottom: 10px;
-    font-size: 45px;
+    font-size: 2.5em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -215,7 +215,7 @@ nav {
 }
 
 .terrestres figcaption {
-    font-size: 45px;
+    font-size: 2.8em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -261,7 +261,7 @@ nav {
 .pajaros figcaption {
     display: block;
     margin: 50px;
-    font-size: 45px;
+    font-size: 2.8em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -283,8 +283,8 @@ nav {
     margin: 0 auto;
     margin-top: 100px;
     border-radius: 15px;
-    font-size: 70px;
-    color: #33771c;
+    font-size: 2.3em;
+    color: #000000;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -314,7 +314,7 @@ nav {
 
 .quienes-somos p {
     font-family: "Inter", sans-serif;
-    font-size: 35px;
+    font-size: 2em;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -328,12 +328,19 @@ nav {
     border-radius: 20px;
     padding: 30px;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 1.4em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-
+.texto-somos h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
 .contacto {
     display: flex;
     justify-content: center;
@@ -347,10 +354,10 @@ nav {
 }
 
 .contacto h1 {
-    background-color: rgba(255, 255, 255, 0.425);
-    color: #33771c;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000000;
     font-family: "Inter", sans-serif;
-    font-size: 70px;
+    font-size: 5em;
     font-weight: 800;
     padding: 20px;
     text-align: center;
@@ -377,7 +384,7 @@ nav {
     width: 450px;
     height: 250px;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 1em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -400,7 +407,7 @@ nav {
     padding: 20px;
     width: 400px;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 1em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -408,7 +415,7 @@ nav {
 
 .contacto-form h2, .contacto-info h2 {
     font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 1.4em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -429,7 +436,7 @@ nav {
 }
 
 .boton-enviar {
-    background-color: #4fa129;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -459,7 +466,7 @@ footer .derechos {
     position: absolute;
     text-align: center;
     left: 50%;
-    font-size: 20px;
+    font-size: 1.3em;
     transform: translateX(-50%);
 }
 

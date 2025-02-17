@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamíferos</title>
+    <title>Menú Principal</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&display=swap"
+        rel="stylesheet">
+
 </head>
 <body>
-    <div class="mamiferos-html">
+    <div class="menu-principal">
+
         <header>
             <a href="index.html" class="logo"><img src="img/logo.png" alt="Botón vuelta a menú Principal"></a>
             <figure class="nombre"><h1><img src="img/nombre-tienda.png" alt="Tienda Huellas Felices"></h1></figure>
@@ -30,21 +36,30 @@
             </nav>
         </header>
 
-        <section class="terrestres">
-            <figure>
-                <img src="img/conejos.png" alt="Sección Conejos y Hamsters">
-                <figcaption>Conejos y Hamsters</figcaption>
+        <section class="portada">
+            <figure class="img-portada"><img src="img/imagen-portada.png" alt="">
+                <figcaption class="inter-texto-portada">
+                    <h2>Un hogar,<br> una vida,<br> una segunda <br>
+                        <strong class="inter-texto-portada-strong">oportunidad</strong>
+                    </h2>
+                </figcaption>
             </figure>
+        </section>
 
-            <figure>
-                <img src="img/gatos.png" alt="Sección Gatos">
-                <figcaption>Gatos</figcaption>
-            </figure>
+        <section class="animales">
+            <a href="aves.html">
+                <figure class="aves">
+                    <img src="img/aves-foto.png" alt="Sección de Aves">
+                    <figcaption>Aves</figcaption>
+                </figure>
+            </a>
 
-            <figure>
-                <img src="img/perros.png" alt="Sección Perros">
-                <figcaption>Perros</figcaption>
-            </figure>
+            <a href="mamiferos.html">
+                <figure class="mamiferos">
+                    <img src="img/mamiferos-foto.png" alt="Sección de Mamíferos">
+                    <figcaption>Mamiferos</figcaption>
+                </figure>
+            </a>
         </section>
 
         <footer class="pie-pagina">
