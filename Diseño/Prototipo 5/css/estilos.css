@@ -328,7 +328,7 @@ nav {
     border-radius: 20px;
     padding: 30px;
     font-family: "Inter", sans-serif;
-    font-size: 1.4em;
+    font-size: 1.34em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -414,6 +414,15 @@ nav {
 }
 
 .contacto-form h2, .contacto-info h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.contacto-form h3 {
     font-family: "Inter", sans-serif;
     font-size: 1.4em;
     font-optical-sizing: auto;
