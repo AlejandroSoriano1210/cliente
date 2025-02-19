@@ -1,0 +1,3 @@
+lista de compra con productos 
+tiene un buscador para ocultar productos y mostrar los que se buscan 
+boton para añadir a carrito de compra

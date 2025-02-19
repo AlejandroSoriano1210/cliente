@@ -10,21 +10,28 @@
     <p>Ingrese el nombre de una ciudad:</p>
     <input type="text" onkeyup="mostrarSugerencias(this.value)">
     <p>Sugerencias: <span id="sugerencias"></span></p>
-    
+
     <script>
-        function mostrarSugerencias(str) {
+        //función asíncrona que muestra las sugerencias de ciudades
+        async function mostrarSugerencias(str) {
+            //si la cadena está vacía, se limpia el contenido de sugerencias
             if (str.length == 0) {
                 document.getElementById("sugerencias").innerHTML = "";
                 return;
             }
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("sugerencias").innerHTML = this.responseText;
+
+            try {
+                let response = await fetch("ciudadessugerencias.php?q=" + str);
+                if (response.ok) {
+                    let data = await response.text();
+                    document.getElementById("sugerencias").innerHTML = data;
+                } else {
+                    console.error("Error en la solicitud", response.status);
                 }
-            };
-            xmlhttp.open("GET", "ciudadessugerencias.php?q=" + str, true);
-            xmlhttp.send();
+
+            } catch (error) {
+                console.error("Error al hacer la solicitud:", error);
+            }
         }
     </script>
 </body>
