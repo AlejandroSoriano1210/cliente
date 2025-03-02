@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+header {
+    display: flex;
+    margin-left: 1%;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+header .nombre {
+    width: 578px;
+    height: 145px;
+}
+
+nav {
+    position: relative;
+    top: 50px;
+    right: 50px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburgesa {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.hamburgesa .linea {
+    width: 100%;
+    font-size: 1px;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle:checked+.hamburgesa .linea:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.menu-toggle:checked+.hamburgesa .linea:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked+.hamburgesa .linea:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.menu {
+    width: 400px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    background-color: #dff3d5;
+    font-size: 2.5em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transform: translateY(-500%);
+    transition: transform 0.45s ease-in-out;
+    z-index: 10;
+}
+
+.menu-toggle:checked~.menu {
+    transform: translateY(0);
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.menu-principal,
+.somos,
+.contacto {
+    background: linear-gradient(#FAFAFA 8%, #98C1FF 14%, #98C1FF 91%, #66D034 94%);
+}
+
+.portada {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.img-portada img {
+    max-width: 70%;
+}
+
+.img-portada .inter-texto-portada {
+    position: absolute;
+    top: 31%;
+    left: 22%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    text-wrap: wrap;
+}
+
+.inter-texto-portada {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inter-texto-portada-strong {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.animales {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    position: relative;
+    margin-left: 22.5%;
+    margin-bottom: 80px;
+}
+
+.animales a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.aves,
+.mamiferos {
+    padding: 10%;
+    width: 296px;
+    height: 393px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-bottom: 10%;
+}
+
+.aves img,
+.mamiferos img {
+    height: 340px;
+}
+
+
+.aves figcaption,
+.mamiferos figcaption {
+    bottom: 10px;
+    font-size: 2em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mamiferos-html {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#98C1FF 13%, #66D034 25%);
+    min-height: 100vh;
+}
+
+.terrestres {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 270px;
+}
+
+.terrestres img {
+    width: 296px;
+    height: 340px;
+}
+
+.terrestres figure {
+    width: 363px;
+    height: 496px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding-top: 30px;
+}
+
+.terrestres figcaption {
+    font-size: 2.8em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+.aves-html {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#FAFAFA 13%, #98C1FF 23%);
+    min-height: 100vh;
+}
+
+.pajaros {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+    margin-left: 31.5%;
+    margin-bottom: 80px;
+    max-width: 819px;
+}
+
+.pajaros img {
+    width: 203px;
+    height: 208px;
+}
+
+.pajaros figure {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+    border-radius: 90px;
+    padding: 20px;
+    position: relative;
+    margin-top: 37px;
+}
+
+.pajaros figcaption {
+    display: block;
+    margin: 50px;
+    font-size: 2.8em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.productos-html {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    position: relative;
+    margin-top: 7.5%;
+    margin-left: 22.5%;
+    margin-bottom: 80px;
+}
+
+.productos-html a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.productos,
+.accesorios {
+    padding: 10%;
+    width: 296px;
+    height: 393px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-bottom: 10%;
+}
+
+.productos img {
+    height: 340px;
+}
+
+.accesorios img {
+    height: 200px;
+}
+
+.productos figcaption,
+.accesorios figcaption {
+    bottom: 10px;
+    font-size: 2em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.accesorios figcaption {
+    margin-top: 50%;
+}
+
+.somos-img {
+    border-radius: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.titulo-somos {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 15px;
+    font-size: 2.3em;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+}
+
+.quienes-somos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 64px 250px 137px 250px;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+
+.imagenes img {
+    margin-bottom: 25px;
+}
+
+.quienes-somos p {
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.texto-somos {
+    width: 793px;
+    height: 530px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.34em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.texto-somos h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+.contacto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contacto .foto-contacto {
+    display: block;
+    margin: 100px auto;
+}
+
+.contacto h1 {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 5em;
+    font-weight: 800;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto-seccion {
+    display: flex;
+    position: relative;
+    gap: 200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.contacto-info {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 450px;
+    height: 250px;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contacto-info .logo-nombre {
+    width: 290px;
+    height: auto;
+}
+
+.contacto-info .logo-dibujo {
+    width: 150px;
+    height: auto;
+}
+
+.contacto-form {
+    position: relative;
+    background-color: #d4e9ff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contacto-form h2, .contacto-info h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.contacto-form h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.contacto-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contacto-form input, .contacto-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton-enviar {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton-enviar:hover {
+    background-color: #4CAF50;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    align-items: center;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+footer .derechos {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    font-size: 1.3em;
+    transform: translateX(-50%);
+}
+
+footer img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1.5%;
+    width: 200px;
+    height: auto;
+}
