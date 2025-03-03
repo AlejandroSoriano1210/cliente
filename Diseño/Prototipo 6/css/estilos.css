@@ -160,7 +160,7 @@ nav {
 
 .animales a {
     text-decoration: none;
-    color: black;
+    color: white;
     width: fit-content;
     height: fit-content;
 }
@@ -170,7 +170,7 @@ nav {
     padding: 10%;
     width: 296px;
     height: 393px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     margin-bottom: 10%;
 }
@@ -495,7 +495,7 @@ nav {
 .contacto-form input, .contacto-form textarea {
     width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -504,13 +504,15 @@ nav {
     background-color: #000000;
     color: white;
     border: none;
-    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5% 15%;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .boton-enviar:hover {
-    background-color: #4CAF50;
+    background-color: #429e45;
 }
 
 footer {
