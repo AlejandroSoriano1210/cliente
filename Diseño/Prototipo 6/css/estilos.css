@@ -19,6 +19,13 @@ header .nombre {
     height: 145px;
 }
 
+header .carrito {
+    position: relative;
+    top: 40px;
+    width: 75px;
+    height: 75px;
+}
+
 nav {
     position: relative;
     top: 50px;
